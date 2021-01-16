@@ -1,8 +1,8 @@
 @import '../styles.scss';
 
-/* ----------------------
+/* ====================
     TRIGGER BUTTON
----------------------- */
+==================== */
 .btn-trigger {
   position: fixed;
   top: 10vw;
@@ -88,7 +88,7 @@
   z-index: 100;
   pointer-events: none;
 
-  &.menu--open {
+  &.menu-open {
     pointer-events: visible;
   }
 }
@@ -109,11 +109,11 @@
     background-position: 50%;
   }
 
-  &.menu--close .menu-inner.animate-close {
+  &.menu-close .menu-inner.animate-close {
     animation: slideLeftNavReverse 0.8s;
   }
 
-  &.menu--open .menu-inner.animate-open {
+  &.menu-open .menu-inner.animate-open {
     animation: slideLeftNav 1s forwards;
 
     &.bg-active:before {
@@ -160,24 +160,24 @@
   margin: 2em 0 0;
 }
 
-.menu--close .menu-item {
+.menu-close .menu-item {
   opacity: 0;
   transform: translate3d(-5000px, 0, 0);
   transition: all 0.4s 0.535s;
 }
 
-.btn--close {
+.btn-close {
   opacity: 0;
 }
 
-.menu--open .menu-item,
-.menu--open .btn--close {
+.menu-open .menu-item,
+.menu-open .btn-close {
   opacity: 1;
   transform: translate3d(0, 0, 0);
   transition: all 0.4s 0.535s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.menu--open .menu-item {
+.menu-open .menu-item {
   &:nth-child(2) {
     transition-delay: 0.565s;
   }

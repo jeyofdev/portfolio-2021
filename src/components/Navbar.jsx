@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/components/navbar.scss';
 import navBg1 from '../img/1.jpg';
 import navBg2 from '../img/2.jpg';
@@ -7,7 +8,7 @@ import navBg4 from '../img/4.jpg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [classnameMenu, setClassnameMenu] = useState('menu menu--close');
+  const [classnameMenu, setClassnameMenu] = useState('menu menu-close');
   const [classnameRevealer, setClassnameRevealer] = useState('block-revealer');
   const [classnameMenuInner, setClassnameMenuInner] = useState('menu-inner');
 
@@ -15,7 +16,7 @@ const Navbar = () => {
     e.target.classList.toggle('is-open');
 
     setIsOpen(!isOpen);
-    setClassnameMenu(isOpen ? 'menu menu--close' : 'menu menu--open');
+    setClassnameMenu(isOpen ? 'menu menu-close' : 'menu menu-open');
 
     setClassnameRevealer(
       isOpen ? 'block-revealer animate-close' : 'block-revealer animate-open'
@@ -82,7 +83,8 @@ const Navbar = () => {
         </button>
         <ul className={classnameMenuInner}>
           <li className="menu-item">
-            <button
+            <Link
+              to="/"
               type="button"
               className="menu-link link-1"
               onMouseEnter={(e) => handleHover(e)}
@@ -92,10 +94,11 @@ const Navbar = () => {
               <span className="menu-link-label link-1">
                 Retour à l&apos;accueil
               </span>
-            </button>
+            </Link>
           </li>
           <li className="menu-item">
-            <button
+            <Link
+              to="/about"
               type="button"
               className="menu-link link-2"
               onMouseEnter={(e) => handleHover(e)}
@@ -105,10 +108,11 @@ const Navbar = () => {
               <span className="menu-link-label link-2">
                 Pour des informations
               </span>
-            </button>
+            </Link>
           </li>
           <li className="menu-item">
-            <button
+            <Link
+              to="/skills"
               type="button"
               className="menu-link link-3"
               onMouseEnter={(e) => handleHover(e)}
@@ -116,10 +120,11 @@ const Navbar = () => {
             >
               <span className="menu-link-name link-3">Compétences</span>
               <span className="menu-link-label link-3">Mes spécialitées</span>
-            </button>
+            </Link>
           </li>
           <li className="menu-item">
-            <button
+            <Link
+              to="/portfolio"
               type="button"
               className="menu-link link-4"
               onMouseEnter={(e) => handleHover(e)}
@@ -129,7 +134,7 @@ const Navbar = () => {
               <span className="menu-link-label link-4">
                 Mes derniers travaux
               </span>
-            </button>
+            </Link>
           </li>
         </ul>
         <div className={classnameRevealer} />
