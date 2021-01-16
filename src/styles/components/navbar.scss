@@ -1,0 +1,161 @@
+body {
+  font-family: 'Inconsolata', monospace;
+  color: #141417;
+  background: #d0cfc5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.menu__link {
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+
+  &:hover,
+  &:focus {
+    color: #2d2d30;
+  }
+}
+
+/* ====================
+    BUTTONS
+==================== */
+.btn {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: none;
+  color: inherit;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn--menu,
+.btn--close {
+  position: fixed;
+  top: 3vw;
+  right: 3vw;
+  color: #939391;
+  pointer-events: visible;
+  z-index: 100;
+}
+
+/* ====================
+    BUTTONS
+==================== */
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 100;
+  pointer-events: none;
+
+  &.menu--open {
+    pointer-events: visible;
+  }
+}
+
+/* ====================
+    MENU
+==================== */
+.menu {
+  .menu__inner {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    list-style-type: none;
+    background: #dfdda0;
+    overflow: hidden;
+    margin: 0;
+    transform: translateX(-100%);
+    padding: 0;
+    transition: all 1s;
+  }
+
+  &.menu--close .menu__inner.animate-close {
+    animation: slideLeftNavReverse 0.8s;
+  }
+
+  &.menu--open .menu__inner.animate-open {
+    animation: slideLeftNav 1s forwards;
+  }
+}
+
+/* ====================
+    NAV LI
+==================== */
+.menu__item {
+  padding: 0.15em;
+}
+
+.menu--close .menu__item {
+  opacity: 0;
+  transform: translate3d(-5000px, 0, 0);
+  transition: all 0.4s 0.535s;
+}
+
+.btn--close {
+  opacity: 0;
+}
+
+.menu--open .menu__item,
+.menu--open .btn--close {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.4s 0.535s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.menu--open .menu__item {
+  &:nth-child(2) {
+    transition-delay: 0.565s;
+  }
+
+  &:nth-child(3) {
+    transition-delay: 0.595s;
+  }
+
+  &:nth-child(4) {
+    transition-delay: 0.625s;
+  }
+}
+
+/* ====================
+    NAV LINKS
+==================== */
+.menu .menu__link {
+  font-size: 3.5vw;
+  color: #4f4f54;
+  font-weight: bold;
+}
+
+.menu .menu__link:hover,
+.menu .menu__link:focus {
+  outline: none;
+  color: #000;
+  text-decoration: line-through;
+}
+
+/* ====================
+    NAV REVEALER
+==================== */
+.block-revealer {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background: rgb(132, 120, 202);
+  pointer-events: none;
+  opacity: 1;
+  z-index: 100000;
+
+  &.animate-open,
+  &.animate-close {
+    animation: slideLeftNavReveal 1s;
+  }
+}

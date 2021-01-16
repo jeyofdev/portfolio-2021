@@ -108,7 +108,9 @@ section {
   display: block;
 }
 
+html,
 body {
+  width: 100%;
   line-height: 1;
 }
 
@@ -141,4 +143,5 @@ button:focus {
 
 a {
   text-decoration: none;
+  outline: none;
 }
