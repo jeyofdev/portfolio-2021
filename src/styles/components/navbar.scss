@@ -1,22 +1,18 @@
 @import '../styles.scss';
 
 /* ====================
-    BUTTONS
+    TRIGGER BUTTON
 ==================== */
-.btn {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  background: none;
-  color: inherit;
-}
-
-.btn-menu,
-.btn-close {
+.btn-trigger {
   position: fixed;
   top: 5vw;
   right: 5vw;
-  color: #939391;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+  padding: 0;
+  transform: translateY(-50%);
   pointer-events: visible;
   z-index: 100;
 
@@ -27,6 +23,55 @@
   @media screen and (min-width: 768px) {
     top: 3vw;
   }
+}
+
+.btn-trigger:hover {
+  cursor: pointer;
+}
+
+.btn-trigger.is-open {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.btn-trigger > .icon {
+  display: block;
+  background-color: lighten($color-nav, 30%);
+  width: 30px;
+  height: 2px;
+  margin: 8px auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-trigger:before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 1px solid transparent;
+  top: calc(50% - 23px);
+  left: calc(50% - 19px);
+  border-radius: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-trigger.is-open:before {
+  border: 2px solid lighten($color-nav, 30%);
+}
+
+.btn-trigger.is-open .icon {
+  width: 20px;
+}
+
+.btn-trigger.is-open .icon:nth-child(2) {
+  opacity: 0;
+}
+
+.btn-trigger.is-open .icon:nth-child(1) {
+  transform: translate(1px, 8px);
+}
+
+.btn-trigger.is-open .icon:nth-child(3) {
+  transform: translate(1px, -13px) rotate(90deg);
 }
 
 /* ====================

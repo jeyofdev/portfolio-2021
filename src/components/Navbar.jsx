@@ -7,7 +7,9 @@ const Navbar = () => {
   const [classnameRevealer, setClassnameRevealer] = useState('block-revealer');
   const [classnameMenuInner, setClassnameMenuInner] = useState('menu-inner');
 
-  const handleClickBtn = () => {
+  const handleClickBtn = (e) => {
+    e.target.classList.toggle('is-open');
+
     setIsOpen(!isOpen);
     setClassnameMenu(isOpen ? 'menu menu-close' : 'menu menu-open');
 
@@ -27,23 +29,16 @@ const Navbar = () => {
   return (
     <div className="Navbar">
       <nav className={classnameMenu}>
-        {!isOpen ? (
-          <button
-            type="button"
-            className="btn btn-menu"
-            onClick={() => handleClickBtn()}
-          >
-            open
-          </button>
-        ) : (
-          <button
-            type="button"
-            className="btn btn-close"
-            onClick={() => handleClickBtn()}
-          >
-            fermer
-          </button>
-        )}
+        <button
+          type="button"
+          className="btn-trigger"
+          id="btn-trigger"
+          onClick={(e) => handleClickBtn(e)}
+        >
+          <span className="icon" />
+          <span className="icon" />
+          <span className="icon" />
+        </button>
         <ul className={classnameMenuInner}>
           <li className="menu-item">
             <button type="button" className="menu-link">
