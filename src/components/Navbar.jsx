@@ -9,11 +9,12 @@ import navBg4 from '../img/4.jpg';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [classnameMenu, setClassnameMenu] = useState('menu menu-close');
+  const [classnameBtnTrigger, setClassnameBtnTrigger] = useState('');
   const [classnameRevealer, setClassnameRevealer] = useState('block-revealer');
   const [classnameMenuInner, setClassnameMenuInner] = useState('menu-inner');
 
-  const handleClickBtn = (e) => {
-    e.target.classList.toggle('is-open');
+  const handleClickBtn = () => {
+    setClassnameBtnTrigger(isOpen ? '' : ' is-open');
 
     setIsOpen(!isOpen);
     setClassnameMenu(isOpen ? 'menu menu-close' : 'menu menu-open');
@@ -31,11 +32,6 @@ const Navbar = () => {
     }, 1000);
   };
 
-  /**
-   * Change the background-image of the current link
-   *
-   * @param {SyntheticEvent} e
-   */
   const handleHover = (e) => {
     const ulElement = e.target.parentNode.parentNode.parentNode;
 
@@ -59,13 +55,14 @@ const Navbar = () => {
     }
   };
 
-  /**
-   * Remove the background-image from current link
-   * @param {SyntheticEvent} e
-   */
   const handleLeave = (e) => {
-    const ulElement = e.target.parentNode.parentNode.parentNode;
-    ulElement.style.backgroundImage = 'none';
+    e.target.parentNode.parentNode.parentNode.style.backgroundImage = 'none';
+    e.target.parentNode.parentNode.parentNode.parentNode.style.backgroundImage =
+      'none';
+  };
+
+  const handleClickLink = () => {
+    handleClickBtn();
   };
 
   return (
@@ -73,9 +70,9 @@ const Navbar = () => {
       <nav className={classnameMenu}>
         <button
           type="button"
-          className="btn-trigger"
+          className={`btn-trigger${classnameBtnTrigger}`}
           id="btn-trigger"
-          onClick={(e) => handleClickBtn(e)}
+          onClick={() => handleClickBtn()}
         >
           <span className="icon" />
           <span className="icon" />
@@ -85,10 +82,10 @@ const Navbar = () => {
           <li className="menu-item">
             <Link
               to="/"
-              type="button"
               className="menu-link link-1"
               onMouseEnter={(e) => handleHover(e)}
               onMouseLeave={(e) => handleLeave(e)}
+              onClick={(e) => handleClickLink(e)}
             >
               <span className="menu-link-name link-1">Home</span>
               <span className="menu-link-label link-1">
@@ -99,10 +96,10 @@ const Navbar = () => {
           <li className="menu-item">
             <Link
               to="/about"
-              type="button"
               className="menu-link link-2"
               onMouseEnter={(e) => handleHover(e)}
               onMouseLeave={(e) => handleLeave(e)}
+              onClick={(e) => handleClickLink(e)}
             >
               <span className="menu-link-name link-2">Profile</span>
               <span className="menu-link-label link-2">
@@ -113,10 +110,10 @@ const Navbar = () => {
           <li className="menu-item">
             <Link
               to="/skills"
-              type="button"
               className="menu-link link-3"
               onMouseEnter={(e) => handleHover(e)}
               onMouseLeave={(e) => handleLeave(e)}
+              onClick={(e) => handleClickLink(e)}
             >
               <span className="menu-link-name link-3">Compétences</span>
               <span className="menu-link-label link-3">Mes spécialitées</span>
@@ -125,10 +122,10 @@ const Navbar = () => {
           <li className="menu-item">
             <Link
               to="/portfolio"
-              type="button"
               className="menu-link link-4"
               onMouseEnter={(e) => handleHover(e)}
               onMouseLeave={(e) => handleLeave(e)}
+              onClick={(e) => handleClickLink(e)}
             >
               <span className="menu-link-name link-4">Portfolio</span>
               <span className="menu-link-label link-4">
