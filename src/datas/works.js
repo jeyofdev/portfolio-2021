@@ -16,7 +16,7 @@ const works = [
   },
   {
     id: 2,
-    image: hackathon2021,
+    image: babyplace,
     title: 'Babyplace',
     content: `Duis non lectus non risus bibendum pulvinar eu sit amet erat.
     Curabitur sit amet dui eu nulla tempus eleifend. Quisque vel
@@ -27,7 +27,7 @@ const works = [
   },
   {
     id: 3,
-    image: babyplace,
+    image: hackathon2021,
     title: 'Cockeat',
     content: `Nullam non tellus hendrerit turpis pretium suscipit sit amet a
     nisl. Donec non purus non justo euismod venenatis vel eget

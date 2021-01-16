@@ -1,1 +1,184 @@
 @import '../styles.scss';
+
+.portfolio .owl-carousel,
+.portfolio .owl-carousel .owl-stage-outer,
+.portfolio .owl-carousel .owl-stage,
+.portfolio .owl-carousel .owl-item {
+  min-height: 100vh;
+}
+
+/* ========================
+    CAROUSEL CONTAINER
+======================== */
+.portfolio .owl-carousel .work {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 0;
+
+  > div {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+
+    &.work-image {
+      min-height: 100vh;
+    }
+
+    @include media-queries-down('md') {
+      &.work-content {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    @include media-queries-up('md') {
+      align-items: center;
+      height: 100vh;
+
+      &.work-image {
+        width: 60%;
+      }
+
+      &.work-content {
+        width: 40%;
+      }
+    }
+  }
+}
+
+/* ===================
+    CAROUSEL IMAGE
+=================== */
+.portfolio .owl-carousel .work .work-image {
+  width: 100%;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* ========================
+    CAROUSEL CONTENT
+======================== */
+.portfolio .owl-item .work .text-inner {
+  display: block;
+  background: rgb(255, 255, 255);
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: all 0.7s ease 0.8s;
+
+  @include media-queries-down('md') {
+    width: 90%;
+    max-width: 500px;
+  }
+
+  @include media-queries-up('md') {
+    width: 110%;
+    padding: 2rem;
+    margin: 0 0 0 -5em;
+  }
+}
+
+.portfolio .owl-item.active .work .text-inner {
+  margin-top: 0;
+  transition: all 0.7s ease 0.8s;
+  animation: fadeInRight 0.5s 0.8s forwards;
+
+  @include media-queries-up('md') {
+    margin-top: 0;
+    margin-left: -5em;
+  }
+}
+
+/* ==========================
+    CAROUSEL RIGHT NUMBER
+========================== */
+.portfolio .owl-item .work .number {
+  display: inline-block;
+  font-size: 1.5rem;
+  text-align: left;
+  color: #ffffff;
+  background: #000;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.4rem 0.4rem 0.5rem 0.4rem;
+  margin-bottom: 1rem;
+}
+
+/* ==================
+    CAROUSEL TEXT
+================== */
+.portfolio .owl-item .work .text-inner h2 {
+  font-size: 2.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  @include media-queries-down('md') {
+    .portfolio .owl-item .work .text-inner h2 {
+      font-size: 1.5;
+    }
+  }
+}
+
+.portfolio .owl-item .work .text-inner .content {
+  position: relative;
+  background: #fff;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.portfolio .owl-item .work .text-inner .content > p {
+  margin: 1.5rem 0;
+  line-height: 1.25;
+}
+
+/* ========================
+    CAROUSEL NAV
+======================== */
+.portfolio .owl-carousel .owl-nav {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+
+  @include media-queries-down('md') {
+    display: none;
+  }
+
+  > [class*='owl-'] {
+    margin: 2px;
+  }
+}
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next,
+.portfolio .owl-nav span {
+  background: #fff;
+  padding: 8px 15px !important;
+  border: none;
+  border-radius: 0;
+}
+
+.portfolio .owl-nav > button span {
+  background: transparent;
+  color: #000;
+  font-size: 2rem !important;
+  border: none;
+}
+
+.portfolio .owl-nav > [class*='owl-']:hover {
+  background: #a9aae7;
+  border: none;
+}
+
+.portfolio .owl-carousel .owl-nav > [class*='owl-']:hover span {
+  color: white;
+}

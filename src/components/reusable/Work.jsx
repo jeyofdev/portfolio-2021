@@ -14,13 +14,11 @@ const Work = ({ data, currentNumber, totalNumber }) => {
 
   return (
     <div className="work">
-      <div className="work-image">
-        <div
-          className="image-content"
-          style={{ backgroundImage: `url(${data.image})` }}
-        />
-      </div>
-      <div className="content">
+      <div
+        className="work-image"
+        style={{ backgroundImage: `url(${data.image})` }}
+      />
+      <div className="work-content">
         <div className="text-inner">
           <span className="number">{getNumbers()}</span>
           <div className="content">
