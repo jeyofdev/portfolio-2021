@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap');
 
-@import 'global/variables';
-@import 'global/reset';
-@import 'global/animations';
+@import 'app/variables';
+
+// core
+//
+@import 'core/functions';
+@import 'core/mixins';
+@import 'core/reset';
+
+// app
+//
+@import 'app/animations';

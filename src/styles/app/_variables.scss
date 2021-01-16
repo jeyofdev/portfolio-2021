@@ -1,0 +1,26 @@
+// variables
+//
+
+// breakpoints
+//
+$containerbreakpoints: () !default;
+$containerbreakpoints: map-merge(
+  (
+    'xs': 0,
+    'sm': 576px,
+    'md': 768px,
+    'lg': 992px,
+    'xl': 1200px,
+  ),
+  $containerbreakpoints
+);
+
+// colors
+$light: white !default;
+$dark: black !default;
+
+$color-nav: #1f1e1e !default;
+$color-link: $light !default;
+
+// Fonts
+$font-family-nav: 'Bodoni Moda', serif !default;
