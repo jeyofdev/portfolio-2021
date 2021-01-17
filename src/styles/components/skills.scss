@@ -1,0 +1,82 @@
+.skills {
+  width: 100%;
+  min-height: 100vh;
+  max-width: 992px;
+  margin: 0 auto;
+}
+
+.skill {
+  position: relative;
+  right: 0;
+  width: 100%;
+  height: 400px;
+  margin-bottom: 11rem;
+}
+
+.skill-image {
+  position: relative;
+  z-index: 0;
+  height: 400px;
+  background-image: url('../../img/1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.skill .skill-content {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  max-width: 600px;
+  z-index: 1;
+
+  > .content {
+    background: white;
+    padding: 80px 60px;
+  }
+}
+
+.skill.inverse {
+  .skill-image {
+    margin-right: 0;
+    margin-left: auto;
+    right: 0;
+    left: auto;
+  }
+  .skill-content {
+    left: 0;
+  }
+}
+
+.skill .skill-content {
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+.skill > [class*='css-']:last-child {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.skill > [class*='css-']:first-child {
+  width: 80%;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.skill.inverse > [class*='css-']:first-child {
+  width: 80%;
+  margin-right: 0;
+  margin-left: auto;
+}
