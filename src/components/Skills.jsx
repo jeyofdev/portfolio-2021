@@ -1,8 +1,8 @@
 import React from 'react';
-import Reveal from 'react-awesome-reveal';
 import { keyframes } from '@emotion/react';
-import useWindowSize from '../hook/useWindowSize';
 import '../styles/components/skills.scss';
+import skills from '../datas/skills';
+import Skill from './reusable/Skill';
 
 const FadeInWidth = keyframes`
   0% {
@@ -39,122 +39,22 @@ const FadeIn = keyframes`
 `;
 
 const Skills = () => {
-  const size = useWindowSize();
-
   return (
     <div className="skills container">
+      <h1 className="skills-title">compétences</h1>
       <div className="skills-items">
-        <div className="skill">
-          <Reveal
-            delay={500}
-            keyframes={size.width >= 768 ? FadeInWidth : FadeInWidth100}
-            cascade
-          >
-            <div className="skill-image" />
-          </Reveal>
-          <Reveal delay={1000} keyframes={FadeIn} cascade>
-            <div className="skill-content">
-              <div className="content">
-                <span className="number">01/04</span>
-                <h2>Front-end</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Dolores ab unde voluptatibus nostrum. Veniam velit quidem
-                  facere vel. Ratione aspernatur ullam unde, natus iste dolorum!
-                </p>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-
-        <div className="skill inverse">
-          <Reveal
-            delay={500}
-            keyframes={window.innerWidth > 768 ? FadeInWidth : FadeInWidth100}
-            cascade
-          >
-            <div className="skill-image" />
-          </Reveal>
-
-          <Reveal delay={1000} keyframes={FadeIn} cascade>
-            <div className="skill-content">
-              <div className="content">
-                <span className="number">02/04</span>
-                <h2>Front-end</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Dolores ab unde voluptatibus nostrum. Veniam velit quidem
-                  facere vel. Ratione aspernatur ullam unde, natus iste dolorum!
-                </p>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-        <div className="skill">
-          <Reveal
-            delay={500}
-            keyframes={window.innerWidth > 768 ? FadeInWidth : FadeInWidth100}
-            cascade
-          >
-            <div className="skill-image" />
-          </Reveal>
-          <Reveal delay={1000} keyframes={FadeIn} cascade>
-            <div className="skill-content">
-              <div className="content">
-                <span className="number">03/04</span>
-                <h2>Front-end</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Dolores ab unde voluptatibus nostrum. Veniam velit quidem
-                  facere vel. Ratione aspernatur ullam unde, natus iste dolorum!
-                </p>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-        <div className="skill inverse">
-          <Reveal
-            delay={500}
-            keyframes={window.innerWidth > 768 ? FadeInWidth : FadeInWidth100}
-            cascade={false}
-          >
-            <div className="skill-image" />
-          </Reveal>
-          <Reveal delay={1000} keyframes={FadeIn} cascade>
-            <div className="skill-content">
-              <div className="content">
-                <span className="number">04/04</span>
-                <h2>Front-end</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Dolores ab unde voluptatibus nostrum. Veniam velit quidem
-                  facere vel. Ratione aspernatur ullam unde, natus iste dolorum!
-                </p>
-              </div>
-            </div>
-          </Reveal>
-        </div>
+        {skills.map((skill) => (
+          <Skill
+            key={skill.id}
+            data={skill}
+            currentNumber={skill.id}
+            totalNumber={skills.length}
+            animFullscreen={FadeInWidth100}
+            anim80={FadeInWidth}
+            animContent={FadeIn}
+          />
+        ))}
       </div>
-
-      {/* <Fade style={{ fontSize: '48px', minHeight: '100vh' }} cascade>
-        <p>I enter first...</p>
-      </Fade>
-      <div style={{ marginTop: '50px', minHeight: '100vh' }}>
-        <Fade
-          direction="right"
-          style={{ minHeight: '100vh', fontSize: '48px' }}
-          cascade
-        >
-          <p>...then comes my turn...</p>
-        </Fade>
-      </div>
-
-      <Fade style={{ minHeight: '100vh', fontSize: '48px' }} cascade>
-        <p>...and finally you see me!</p>
-      </Fade>
-      <Fade style={{ minHeight: '100vh', fontSize: '48px' }} cascade>
-        <p>...and finally you see me!</p>
-      </Fade> */}
     </div>
   );
 };

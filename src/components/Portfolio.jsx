@@ -22,6 +22,7 @@ const Portfolio = () => {
       >
         {works.map((work) => (
           <Work
+            key={work.id}
             data={work}
             currentNumber={work.id}
             totalNumber={works.length}
