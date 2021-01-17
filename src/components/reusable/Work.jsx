@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import getNumberWithZero from '../../utils/numbers';
+import Button from './Button';
 
 const Work = ({ data, currentNumber, totalNumber }) => {
   /**
@@ -25,14 +26,7 @@ const Work = ({ data, currentNumber, totalNumber }) => {
             <h2>{data.title}</h2>
             <p className="description">{data.content}</p>
 
-            <button
-              type="button"
-              target="_blank"
-              className="btn btn-more"
-              data-text="Voir le site"
-            >
-              <span>Voir le site</span>
-            </button>
+            <Button label="voir le site" className="btn-more" />
           </div>
         </div>
       </div>
