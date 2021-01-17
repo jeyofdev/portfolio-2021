@@ -1,6 +1,7 @@
 import React from 'react';
 import Reveal from 'react-awesome-reveal';
 import { keyframes } from '@emotion/react';
+import useWindowSize from '../hook/useWindowSize';
 import '../styles/components/skills.scss';
 
 const FadeInWidth = keyframes`
@@ -15,6 +16,18 @@ const FadeInWidth = keyframes`
   }
 `;
 
+const FadeInWidth100 = keyframes`
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+`;
+
 const FadeIn = keyframes`
   from {
     opacity: 0;
@@ -26,17 +39,23 @@ const FadeIn = keyframes`
 `;
 
 const Skills = () => {
+  const size = useWindowSize();
+
   return (
     <div className="skills container">
       <div className="skills-items">
         <div className="skill">
-          <Reveal keyframes={FadeInWidth} cascade>
+          <Reveal
+            delay={500}
+            keyframes={size.width >= 768 ? FadeInWidth : FadeInWidth100}
+            cascade
+          >
             <div className="skill-image" />
           </Reveal>
-          <Reveal delay={500} keyframes={FadeIn} cascade>
+          <Reveal delay={1000} keyframes={FadeIn} cascade>
             <div className="skill-content">
               <div className="content">
-                <span className="number">01</span>
+                <span className="number">01/04</span>
                 <h2>Front-end</h2>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -49,14 +68,18 @@ const Skills = () => {
         </div>
 
         <div className="skill inverse">
-          <Reveal keyframes={FadeInWidth} cascade>
+          <Reveal
+            delay={500}
+            keyframes={window.innerWidth > 768 ? FadeInWidth : FadeInWidth100}
+            cascade
+          >
             <div className="skill-image" />
           </Reveal>
 
-          <Reveal delay={500} keyframes={FadeIn} cascade>
+          <Reveal delay={1000} keyframes={FadeIn} cascade>
             <div className="skill-content">
               <div className="content">
-                <span className="number">01</span>
+                <span className="number">02/04</span>
                 <h2>Front-end</h2>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -68,13 +91,17 @@ const Skills = () => {
           </Reveal>
         </div>
         <div className="skill">
-          <Reveal keyframes={FadeInWidth} cascade>
+          <Reveal
+            delay={500}
+            keyframes={window.innerWidth > 768 ? FadeInWidth : FadeInWidth100}
+            cascade
+          >
             <div className="skill-image" />
           </Reveal>
-          <Reveal delay={500} keyframes={FadeIn} cascade>
+          <Reveal delay={1000} keyframes={FadeIn} cascade>
             <div className="skill-content">
               <div className="content">
-                <span className="number">01</span>
+                <span className="number">03/04</span>
                 <h2>Front-end</h2>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -86,13 +113,17 @@ const Skills = () => {
           </Reveal>
         </div>
         <div className="skill inverse">
-          <Reveal keyframes={FadeInWidth} cascade={false}>
+          <Reveal
+            delay={500}
+            keyframes={window.innerWidth > 768 ? FadeInWidth : FadeInWidth100}
+            cascade={false}
+          >
             <div className="skill-image" />
           </Reveal>
-          <Reveal delay={500} keyframes={FadeIn} cascade>
+          <Reveal delay={1000} keyframes={FadeIn} cascade>
             <div className="skill-content">
               <div className="content">
-                <span className="number">01</span>
+                <span className="number">04/04</span>
                 <h2>Front-end</h2>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
