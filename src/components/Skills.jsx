@@ -1,8 +1,8 @@
 import React from 'react';
 import { keyframes } from '@emotion/react';
-import '../styles/components/skills.scss';
 import skills from '../datas/skills';
 import Skill from './reusable/Skill';
+import '../styles/components/skills.scss';
 
 const FadeInWidth = keyframes`
   0% {

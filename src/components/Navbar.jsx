@@ -101,7 +101,7 @@ const Navbar = () => {
               onMouseLeave={(e) => handleLeave(e)}
               onClick={(e) => handleClickLink(e)}
             >
-              <span className="menu-link-name link-2">Profile</span>
+              <span className="menu-link-name link-2">A propos</span>
               <span className="menu-link-label link-2">
                 Pour des informations
               </span>

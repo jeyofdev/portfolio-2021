@@ -1,0 +1,139 @@
+@import '../styles.scss';
+
+/* ========================
+    ABOUT CONTAINER
+======================== */
+.about.container {
+  min-height: calc(100vh - 340px);
+  padding: 0;
+
+  > h1 {
+    font-family: $font-family-title;
+    font-size: 2.25rem;
+    line-height: 1;
+    text-transform: uppercase;
+    color: currentColor;
+    -webkit-text-stroke: 1px rgba(#1f1e1e, 0.5);
+    -webkit-text-fill-color: transparent;
+    margin-top: 6rem;
+    text-align: center;
+
+    @include media-queries-up('md') {
+      font-size: 7vw;
+    }
+  }
+}
+
+.about .about-bg {
+  background: url(../../img/3.jpg) no-repeat;
+  background-size: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  width: 100%;
+  height: 340px;
+}
+
+.about .about-content {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+  margin-top: 250px;
+}
+
+.about .about-content .about-profile {
+  position: relative;
+}
+
+/* ========================
+    DESCRIPTION
+======================== */
+.about .about-content .about-text {
+  padding: 0 1.5rem;
+  margin: 2rem 0;
+
+  @include media-queries-up('md') {
+    max-width: 900px;
+  }
+
+  > p {
+    font-size: 1.1rem;
+    text-align: left;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+}
+
+/* ========================
+    CONTACT
+======================== */
+.about .contact {
+  margin-top: 2rem;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 1rem;
+  justify-content: center;
+  text-align: center;
+
+  @include media-queries-up('lg') {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #d9d9d9;
+
+    @include media-queries-up('lg') {
+      grid-column: 1 / 4;
+    }
+  }
+}
+
+.about .contact .contact-item {
+  width: 100%;
+  margin-bottom: 1.5rem;
+
+  &:after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+    height: 2px;
+    background: #000;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .icon {
+    font-size: 2rem;
+  }
+
+  > p,
+  > a {
+    font-size: 1.7em;
+    line-height: 1.3;
+    color: black;
+
+    > span {
+      display: block;
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      margin: 0 auto;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
