@@ -102,6 +102,21 @@
   width: 100%;
   margin-bottom: 1.5rem;
 
+  &.address {
+    transform: translateX(-2000px) scale(0.7);
+    animation: backInLeft 0.5s 0.5s forwards;
+  }
+
+  &.phone {
+    opacity: 0;
+    animation: bounceIn 0.5s 0.2s forwards;
+  }
+
+  &.email {
+    transform: translateX(2000px) scale(0.7);
+    animation: backInRight 0.5s 0.5s forwards;
+  }
+
   &:after {
     content: '';
     display: block;

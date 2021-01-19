@@ -11,33 +11,11 @@ const About = () => {
           <div className="about-profile">
             <img src={profile} alt="" />
           </div>
-          <div className="about-text">
-            <p className="description">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-              molestiae voluptas, doloribus animi praesentium modi ipsam ipsum
-              exercitationem aperiam commodi deleniti nulla deserunt quae
-              consequuntur quod laudantium, similique placeat. Impedit.
-            </p>
-
-            <p className="description">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-              molestiae voluptas, doloribus animi praesentium modi ipsam ipsum
-              exercitationem aperiam commodi deleniti nulla deserunt quae
-              consequuntur quod laudantium, similique placeat. Impedit.
-            </p>
-
-            <p className="description">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-              molestiae voluptas, doloribus animi praesentium modi ipsam ipsum
-              exercitationem aperiam commodi deleniti nulla deserunt quae
-              consequuntur quod laudantium, similique placeat. Impedit.
-            </p>
-          </div>
         </div>
 
         <div className="contact">
           <h3 className="contact-title">Pour me contacter :</h3>
-          <div className="contact-item">
+          <div className="contact-item address">
             <span className="icon">
               <FaHome />
             </span>
@@ -48,14 +26,14 @@ const About = () => {
             </p>
           </div>
 
-          <div className="contact-item">
+          <div className="contact-item phone">
             <span className="icon">
               <FaPhoneSquareAlt />
             </span>
             <p>06 71 27 53 21</p>
           </div>
 
-          <div className="contact-item">
+          <div className="contact-item email">
             <span className="icon">
               <FaEnvelopeOpen />
             </span>
