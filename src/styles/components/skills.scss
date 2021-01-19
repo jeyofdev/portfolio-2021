@@ -127,7 +127,7 @@
   }
 
   @include media-queries-up('lg') {
-    max-width: 600px;
+    max-width: 500px;
   }
 
   > .content {
@@ -137,6 +137,7 @@
 
     @include media-queries-up('md') {
       padding: 40px 30px;
+      width: 100%;
     }
   }
 }
@@ -146,6 +147,7 @@
 
   > .content {
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    min-width: 50%;
   }
 }
 
@@ -169,5 +171,20 @@
   p {
     font-size: 1rem;
     line-height: 1.2;
+    max-width: 280px;
+
+    img {
+      width: 35px;
+      height: 35px;
+      margin: 1.5rem 0.5rem 0;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 }

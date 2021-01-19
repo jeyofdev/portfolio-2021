@@ -2,22 +2,25 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../../styles/components/reusable/button.scss';
 
-const Button = ({ label, className }) => {
+const Button = ({ label, className, url, isDisable }) => {
   return (
-    <button
-      type="button"
+    <a
+      href={url}
       target="_blank"
-      className={className}
+      className={`${className} ${!isDisable ? 'is-disable' : ''}`}
       data-text={label}
+      rel="noreferrer"
     >
       <span>{label}</span>
-    </button>
+    </a>
   );
 };
 
 Button.propTypes = {
   label: PropTypes.string.isRequired,
   className: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  isDisable: PropTypes.bool.isRequired,
 };
 
 export default Button;

@@ -25,8 +25,24 @@ const Work = ({ data, currentNumber, totalNumber }) => {
           <div className="content">
             <h2>{data.title}</h2>
             <p className="description">{data.content}</p>
+            <p>
+              {data.techno.map((techno) => (
+                <img src={techno} alt="icon" />
+              ))}
+            </p>
 
-            <Button label="voir le site" className="btn-more" />
+            {data.isOnline ? (
+              <Button
+                label={data.isOnline ? 'voir le site' : 'Bientôt en ligne'}
+                className="btn-more"
+                url={data.link}
+                isDisable={data.isOnline}
+              />
+            ) : (
+              <span className="is-disabled" type="button">
+                Bientôt en ligne
+              </span>
+            )}
           </div>
         </div>
       </div>

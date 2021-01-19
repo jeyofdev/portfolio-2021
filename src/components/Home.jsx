@@ -30,7 +30,9 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="home-bg" />
+      <div className="home-bg">
+        <div className="bg-image" />
+      </div>
     </div>
   );
 };
