@@ -1,4 +1,7 @@
 @import '../styles.scss';
+@import '../app/content';
+@import '../app/buttons';
+@import '../app/images';
 
 .portfolio .owl-carousel,
 .portfolio .owl-carousel .owl-stage-outer,
@@ -11,17 +14,15 @@
     CAROUSEL CONTAINER
 ======================== */
 .portfolio .owl-carousel .work {
+  @include make-flex(null, null, null, wrap);
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
   width: 100%;
   min-height: 100vh;
   z-index: 0;
 
   > div {
+    @include make-flex(null, flex-start);
     position: relative;
-    display: flex;
-    align-items: flex-start;
     width: 100%;
 
     &.work-image {
@@ -66,7 +67,7 @@
 ======================== */
 .portfolio .owl-item .work .text-inner {
   display: block;
-  background: rgb(255, 255, 255);
+  background: $light;
   width: 100%;
   margin: 0 auto;
   padding: 1.5rem;
@@ -100,14 +101,7 @@
     CAROUSEL RIGHT NUMBER
 ========================== */
 .portfolio .owl-item .work .number {
-  display: inline-block;
-  font-size: 1.5rem;
-  text-align: left;
-  color: #ffffff;
-  background: #000;
-  font-weight: 700;
-  line-height: 1;
-  padding: 0.4rem 0.4rem 0.5rem 0.4rem;
+  @extend %number;
   margin-bottom: 1rem;
 }
 
@@ -115,20 +109,12 @@
     CAROUSEL TEXT
 ================== */
 .portfolio .owl-item .work .text-inner h2 {
-  font-size: 2.85rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-
-  @include media-queries-down('md') {
-    .portfolio .owl-item .work .text-inner h2 {
-      font-size: 1.5;
-    }
-  }
+  @extend %h2;
 }
 
 .portfolio .owl-item .work .text-inner .content {
   position: relative;
-  background: #fff;
+  background: $light;
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -136,15 +122,13 @@
 }
 
 .portfolio .owl-item .work .text-inner .content > p {
-  display: flex;
-  justify-content: flex-start;
+  @extend %p;
+  @include make-flex(flex-start);
   margin: 1.5rem 0;
-  line-height: 1.25;
 
   img {
-    width: 35px;
-    height: 35px;
-    margin: 0 0.5rem 0;
+    @extend %icon;
+    margin-top: 1rem;
 
     &:first-child {
       margin-left: 0;
@@ -177,7 +161,7 @@
 .owl-carousel .owl-nav button.owl-prev,
 .owl-carousel .owl-nav button.owl-next,
 .portfolio .owl-nav span {
-  background: #fff;
+  background: $light;
   padding: 8px 15px !important;
   border: none;
   border-radius: 0;
@@ -185,16 +169,16 @@
 
 .portfolio .owl-nav > button span {
   background: transparent;
-  color: #000;
+  color: $dark;
   font-size: 2rem !important;
   border: none;
 }
 
 .portfolio .owl-nav > [class*='owl-']:hover {
-  background: #a9aae7;
+  background: $dark;
   border: none;
 }
 
 .portfolio .owl-carousel .owl-nav > [class*='owl-']:hover span {
-  color: white;
+  color: $light;
 }

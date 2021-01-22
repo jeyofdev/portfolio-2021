@@ -1,0 +1,46 @@
+%number {
+  background: $dark;
+  color: $light;
+  font-family: $font-family-fourth;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 0.8;
+  text-align: left;
+  display: inline-block;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+%heading {
+  font-family: $font-family-headings;
+  color: $dark;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 2px;
+}
+
+%h1 {
+  @extend %heading;
+  font-family: $font-family-title;
+  font-size: 2.25rem;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-text-stroke: 1px rgba($dark, 0.5);
+  -webkit-text-fill-color: transparent;
+
+  @include media-queries-up('md') {
+    font-size: 7vw;
+  }
+}
+
+%h2 {
+  @extend %heading;
+  font-size: 2.85rem;
+  color: $dark;
+}
+
+%p {
+  font-size: 1rem;
+  font-family: $font-family-content;
+  line-height: 1.5;
+}

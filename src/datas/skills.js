@@ -18,6 +18,8 @@ import php from '../img/skills/icons/php.svg';
 import symfony from '../img/skills/icons/symfony.svg';
 import composer from '../img/skills/icons/composer.svg';
 import mysql from '../img/skills/icons/mysql.svg';
+import express from '../img/skills/icons/express.svg';
+import jwt from '../img/skills/icons/jwt.svg';
 
 import nodejs from '../img/skills/icons/node-js.svg';
 
@@ -51,7 +53,7 @@ const skills = [
     posuere justo, consequat vehicula lacus. Nulla rutrum nulla
     lorem, in vehicula dui condimentum sit amet. Suspendisse
     bibendum quis mi in euismod. Fusce vel congue nisi.`,
-    icons: [php, symfony, composer, nodejs, mysql],
+    icons: [php, symfony, composer, nodejs, mysql, express, jwt],
   },
   {
     id: 3,

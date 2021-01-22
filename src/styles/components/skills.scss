@@ -1,10 +1,13 @@
 @import '../styles.scss';
+@import '../app/content';
+@import '../app/images';
 
 /* ========================
     SKILLS CONTAINER
 ======================== */
 .skills.container {
   min-height: 100vh;
+  padding-top: 6rem;
 
   @include media-queries-down('md') {
     padding: 0;
@@ -13,18 +16,10 @@
   }
 
   > h1 {
-    font-family: $font-family-title;
-    font-size: 2.25rem;
-    line-height: 1;
-    text-transform: uppercase;
-    color: currentColor;
-    -webkit-text-stroke: 1px rgba(#1f1e1e, 0.5);
-    -webkit-text-fill-color: transparent;
-    margin-top: 6rem;
-    text-align: center;
+    @extend %h1;
 
-    @include media-queries-up('md') {
-      font-size: 7vw;
+    @include media-queries-down('md') {
+      margin-top: 6rem;
     }
   }
 }
@@ -33,9 +28,8 @@
     SKILL
 ============= */
 .skills .skills-items .skill {
+  @include make-flex(null, center);
   position: relative;
-  display: flex;
-  align-items: center;
   margin: 10rem 0;
 
   @include media-queries-up('md') {
@@ -48,7 +42,7 @@
   }
 
   &:last-child {
-    margin-bottom: 4rem;
+    padding-bottom: 4rem;
   }
 }
 
@@ -99,10 +93,8 @@
     SKILL CONTENT
 =================== */
 .skills .skills-items .skill > [class*='css-']:last-child {
+  @include make-flex(center, center);
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   top: 0;
   width: 100%;
   height: 100%;
@@ -116,9 +108,8 @@
   z-index: 1;
 
   @include media-queries-up('md') {
+    @include make-flex(null, center);
     position: absolute;
-    display: flex;
-    align-items: center;
     top: 0;
     right: 0;
     width: 60%;
@@ -131,9 +122,9 @@
   }
 
   > .content {
-    background: white;
+    background: $light;
     padding: 1.85rem;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px 0 rgba($dark, 0.2);
 
     @include media-queries-up('md') {
       padding: 40px 30px;
@@ -146,37 +137,29 @@
   left: 0;
 
   > .content {
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px 0 rgba($dark, 0.2);
     min-width: 50%;
   }
 }
 
 .skills .skills-items .skill .skill-content {
   .number {
-    display: inline-block;
-    font-size: 1rem;
-    text-align: left;
-    color: #ffffff;
-    background: #000;
-    font-weight: 700;
-    line-height: 1;
-    padding: 0.4rem 0.4rem 0.5rem 0.4rem;
+    @extend %number;
     margin-bottom: 0.4rem;
   }
+
   h2 {
+    @extend %h2;
     font-size: 2rem;
     padding: 1rem 0;
   }
 
   p {
-    font-size: 1rem;
-    line-height: 1.2;
+    @extend %p;
     max-width: 280px;
 
     img {
-      width: 35px;
-      height: 35px;
-      margin: 1.5rem 0.5rem 0;
+      @extend %icon;
 
       &:first-child {
         margin-left: 0;

@@ -8,8 +8,9 @@ import react from '../img/skills/icons/react.svg';
 import redux from '../img/skills/icons/redux.svg';
 import mysql from '../img/skills/icons/mysql.svg';
 import nodejs from '../img/skills/icons/node-js.svg';
-import database from '../img/skills/icons/database.svg';
 import figma from '../img/skills/icons/figma.svg';
+import express from '../img/skills/icons/express.svg';
+import jwt from '../img/skills/icons/jwt.svg';
 
 const works = [
   {
@@ -26,7 +27,7 @@ const works = [
     image: babyplace,
     title: 'Babyplace',
     content: `Projet de formation de 2 mois à la Wild Code School de Bordeaux. Réalisation du site internet de Babyplace. Babyplace est une startup dont le but est de faciliter la garde d'enfant entre les parents et les professionnels de la petite enfance.Réalisé en groupe de 5 personnes`,
-    techno: [html, css, react, redux, nodejs, mysql, database, figma],
+    techno: [html, css, react, redux, nodejs, mysql, jwt, express, figma],
     isOnline: false,
     link: '',
   },

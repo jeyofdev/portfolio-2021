@@ -9,7 +9,7 @@ const Button = ({ label, className, url, isDisable }) => {
       target="_blank"
       className={`${className} ${!isDisable ? 'is-disable' : ''}`}
       data-text={label}
-      rel="noreferrer"
+      rel="noopener noreferrer"
     >
       <span>{label}</span>
     </a>

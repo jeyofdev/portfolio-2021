@@ -6,7 +6,8 @@
 @mixin make-flex(
   $justify-content: null,
   $align-items: null,
-  $flex-direction: null
+  $flex-direction: null,
+  $flex-wrap: null
 ) {
   display: flex;
 
@@ -20,5 +21,9 @@
 
   @if ($flex-direction != null) {
     flex-direction: $flex-direction;
+  }
+
+  @if ($flex-wrap != null) {
+    flex-wrap: $flex-wrap;
   }
 }
