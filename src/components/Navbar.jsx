@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/components/navbar.scss';
-import navBg1 from '../img/1.jpg';
-import navBg2 from '../img/2.jpg';
-import navBg3 from '../img/3.jpg';
-import navBg4 from '../img/4.jpg';
+// import navBg1 from '../img/1.jpg';
+// import navBg2 from '../img/2.jpg';
+// import navBg3 from '../img/3.jpg';
+// import navBg4 from '../img/4.jpg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,22 +37,22 @@ const Navbar = () => {
 
     ulElement.classList.add('bg-active');
 
-    switch (e.target.classList[1]) {
-      case 'link-1':
-        ulElement.style.backgroundImage = `url(${navBg1})`;
-        break;
-      case 'link-2':
-        ulElement.style.backgroundImage = `url(${navBg2})`;
-        break;
-      case 'link-3':
-        ulElement.style.backgroundImage = `url(${navBg3})`;
-        break;
-      case 'link-4':
-        ulElement.style.backgroundImage = `url(${navBg4})`;
-        break;
-      default:
-        break;
-    }
+    // switch (e.target.classList[1]) {
+    //   case 'link-1':
+    //     ulElement.style.backgroundImage = `url(${navBg1})`;
+    //     break;
+    //   case 'link-2':
+    //     ulElement.style.backgroundImage = `url(${navBg2})`;
+    //     break;
+    //   case 'link-3':
+    //     ulElement.style.backgroundImage = `url(${navBg3})`;
+    //     break;
+    //   case 'link-4':
+    //     ulElement.style.backgroundImage = `url(${navBg4})`;
+    //     break;
+    //   default:
+    //     break;
+    // }
   };
 
   const handleLeave = (e) => {
