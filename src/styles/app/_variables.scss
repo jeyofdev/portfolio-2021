@@ -1,0 +1,53 @@
+// variables
+//
+
+// breakpoints
+//
+$containerbreakpoints: () !default;
+$containerbreakpoints: map-merge(
+  (
+    'xs': 0,
+    'sm': 576px,
+    'md': 768px,
+    'lg': 992px,
+    'xl': 1200px,
+  ),
+  $containerbreakpoints
+);
+
+// containers
+//
+// width of the container padding
+//
+$container-gutter-width: 30px !default;
+
+// widths for each breakpoints
+//
+$containerWidths: () !default;
+$containerWidths: map-merge(
+  (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+  ),
+  $containerWidths
+);
+
+// colors
+$light: #ebedf7 !default;
+$dark: #0d0f1f !default;
+
+$color-nav: $dark !default;
+$color-link: $light !default;
+
+$primary: #1f1e1e;
+$secondary: #fff;
+
+// Fonts
+$font-family-nav: 'Bodoni Moda', serif !default;
+$font-family-title: 'Libre Baskerville', serif !default;
+$font-family-content: 'Libre Baskerville', serif !default;
+$font-family-headings: 'Playfair Display', serif !default;
+$font-family-third: 'Anton', sans-serif;
+$font-family-fourth: 'Ubuntu', sans-serif;

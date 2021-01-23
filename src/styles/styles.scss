@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Ubuntu:wght@400;500&family=Anton&display=swap');
+
+@import 'app/variables';
+
+// core
+//
+@import 'core/functions';
+@import 'core/mixins';
+@import 'core/layout';
+@import 'core/reset';
+
+// app
+//
+@import 'app/animations';
