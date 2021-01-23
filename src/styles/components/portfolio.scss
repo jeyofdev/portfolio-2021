@@ -33,6 +33,8 @@
       &.work-content {
         position: absolute;
         bottom: 0;
+        max-height: 60%;
+        overflow-y: scroll;
       }
     }
 
@@ -123,8 +125,12 @@
 
 .portfolio .owl-item .work .text-inner .content > p {
   @extend %p;
-  @include make-flex(flex-start);
+  @include make-flex(flex-start, null, null, wrap);
   margin: 1.5rem 0;
+
+  &.logos {
+    width: 100%;
+  }
 
   img {
     @extend %icon;

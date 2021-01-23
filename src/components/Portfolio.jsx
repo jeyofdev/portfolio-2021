@@ -12,10 +12,11 @@ const Portfolio = () => {
       <OwlCarousel
         className="owl-theme"
         items={1}
-        autoplay={false}
+        autoplay
+        autoplayTimeout={12000}
         loop
         merge
-        margin={10}
+        margin={15}
         nav
         dots={false}
         animateOut="fadeOut"

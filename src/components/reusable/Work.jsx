@@ -25,7 +25,7 @@ const Work = ({ data, currentNumber, totalNumber }) => {
           <div className="content">
             <h2>{data.title}</h2>
             <p className="description">{data.content}</p>
-            <p>
+            <p className="logos">
               {data.techno.map((techno) => (
                 <img src={techno} alt="icon" />
               ))}

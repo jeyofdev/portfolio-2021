@@ -27,6 +27,7 @@ import wordpressLogo from '../img/skills/icons/wordpress.svg';
 
 import git from '../img/skills/icons/git.svg';
 import trello from '../img/skills/icons/trello.svg';
+import postman from '../img/skills/icons/postman.svg';
 
 import photoshop from '../img/skills/icons/photoshop.svg';
 import illustrator from '../img/skills/icons/illustrator.svg';
@@ -75,7 +76,7 @@ const skills = [
     ligula. Aliquam interdum nec nulla in viverra. Quisque
     ullamcorper purus eget malesuada tempus. Proin vulputate
     ultricies sapien, in vulputate mi imperdiet ac.`,
-    icons: [git, trello],
+    icons: [git, trello, postman],
   },
   {
     id: 5,
