@@ -12,8 +12,7 @@ const Portfolio = () => {
       <OwlCarousel
         className="owl-theme"
         items={1}
-        autoplay
-        autoplayTimeout={12000}
+        autoplay={false}
         loop
         merge
         margin={15}
