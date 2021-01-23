@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/components/navbar.scss';
-import navBg1 from '../img/1.jpg';
-import navBg2 from '../img/2.jpg';
-import navBg3 from '../img/3.jpg';
-import navBg4 from '../img/4.jpg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,35 +28,6 @@ const Navbar = () => {
     }, 1000);
   };
 
-  const handleHover = (e) => {
-    const ulElement = e.target.parentNode.parentNode.parentNode;
-
-    ulElement.classList.add('bg-active');
-
-    switch (e.target.classList[1]) {
-      case 'link-1':
-        ulElement.style.backgroundImage = `url(${navBg1})`;
-        break;
-      case 'link-2':
-        ulElement.style.backgroundImage = `url(${navBg2})`;
-        break;
-      case 'link-3':
-        ulElement.style.backgroundImage = `url(${navBg3})`;
-        break;
-      case 'link-4':
-        ulElement.style.backgroundImage = `url(${navBg4})`;
-        break;
-      default:
-        break;
-    }
-  };
-
-  const handleLeave = (e) => {
-    e.target.parentNode.parentNode.parentNode.style.backgroundImage = 'none';
-    e.target.parentNode.parentNode.parentNode.parentNode.style.backgroundImage =
-      'none';
-  };
-
   const handleClickLink = () => {
     handleClickBtn();
   };
@@ -83,8 +50,6 @@ const Navbar = () => {
             <Link
               to="/"
               className="menu-link link-1"
-              onMouseEnter={(e) => handleHover(e)}
-              onMouseLeave={(e) => handleLeave(e)}
               onClick={(e) => handleClickLink(e)}
             >
               <span className="menu-link-name link-1">Home</span>
@@ -95,24 +60,8 @@ const Navbar = () => {
           </li>
           <li className="menu-item">
             <Link
-              to="/about"
-              className="menu-link link-2"
-              onMouseEnter={(e) => handleHover(e)}
-              onMouseLeave={(e) => handleLeave(e)}
-              onClick={(e) => handleClickLink(e)}
-            >
-              <span className="menu-link-name link-2">A propos</span>
-              <span className="menu-link-label link-2">
-                Pour des informations
-              </span>
-            </Link>
-          </li>
-          <li className="menu-item">
-            <Link
               to="/skills"
               className="menu-link link-3"
-              onMouseEnter={(e) => handleHover(e)}
-              onMouseLeave={(e) => handleLeave(e)}
               onClick={(e) => handleClickLink(e)}
             >
               <span className="menu-link-name link-3">Compétences</span>
@@ -123,14 +72,22 @@ const Navbar = () => {
             <Link
               to="/portfolio"
               className="menu-link link-4"
-              onMouseEnter={(e) => handleHover(e)}
-              onMouseLeave={(e) => handleLeave(e)}
               onClick={(e) => handleClickLink(e)}
             >
               <span className="menu-link-name link-4">Portfolio</span>
               <span className="menu-link-label link-4">
                 Mes derniers travaux
               </span>
+            </Link>
+          </li>
+          <li className="menu-item">
+            <Link
+              to="/contact"
+              className="menu-link link-2"
+              onClick={(e) => handleClickLink(e)}
+            >
+              <span className="menu-link-name link-2">Contact</span>
+              <span className="menu-link-label link-2">Pour me contacter</span>
             </Link>
           </li>
         </ul>
