@@ -47,6 +47,15 @@
 
 .contact .contact-content .contact-profile {
   position: relative;
+  background: $light;
+  border-radius: 100%;
+  padding: 6px;
+  border: 5px solid $dark;
+  box-shadow: 0 0 2px 3px $dark;
+
+  > img {
+    border-radius: 100%;
+  }
 }
 
 /* ========================
