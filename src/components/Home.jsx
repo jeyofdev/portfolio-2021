@@ -1,5 +1,11 @@
 import React from 'react';
-import { FaStar } from 'react-icons/fa';
+import {
+  FaStar,
+  FaGithubSquare,
+  FaEnvelopeOpen,
+  FaTwitterSquare,
+  FaLinkedin,
+} from 'react-icons/fa';
 import '../styles/components/home.scss';
 
 const Home = () => {
@@ -27,6 +33,37 @@ const Home = () => {
             </span>
             <span>France</span>
           </h3>
+
+          <p className="social">
+            <a
+              href="https://github.com/jeyofdev"
+              target="blank"
+              className="social-link"
+            >
+              <FaGithubSquare className="social" />
+            </a>
+            <a
+              href="mailto:jgregoire.pro@gmail.com"
+              target="blank"
+              className="social-link"
+            >
+              <FaEnvelopeOpen className="social" />
+            </a>
+            <a
+              href="https://twitter.com/JeremyGregoire"
+              target="blank"
+              className="social-link"
+            >
+              <FaTwitterSquare className="social" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/jeremy-gr%C3%A9goire-719130203/"
+              target="blank"
+              className="social-link"
+            >
+              <FaLinkedin className="social" />
+            </a>
+          </p>
         </div>
       </div>
 
