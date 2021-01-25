@@ -5,6 +5,7 @@ import {
   FaPhoneSquareAlt,
   FaGithubSquare,
   FaTwitterSquare,
+  FaLinkedin,
 } from 'react-icons/fa';
 import '../styles/components/contact.scss';
 import profile from '../img/jey026.png';
@@ -29,9 +30,17 @@ const Contact = () => {
               <a href="https://github.com/jeyofdev" target="blank">
                 <FaGithubSquare />
               </a>
-
+              <a href="mailto:jgregoire.pro@gmail.com" target="blank">
+                <FaEnvelopeOpen />
+              </a>
               <a href="https://twitter.com/JeremyGregoire" target="blank">
                 <FaTwitterSquare />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/jeremy-gr%C3%A9goire-719130203/"
+                target="blank"
+              >
+                <FaLinkedin />
               </a>
             </p>
           </div>
