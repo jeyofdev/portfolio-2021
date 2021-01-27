@@ -46,7 +46,7 @@ const works = [
   {
     id: 3,
     image: hackathon2021,
-    title: 'Coockeat',
+    title: "Cook'eat",
     content: `Projet vainqueur du Hackathon sur 48H organisé par Ekino et la Wild Code School. Hackathon dont le thème était "créer du lien en période de confinement". Nous avions choisis de créer un dérivé de twitch avec comme sujet "le partage de recettes de cuisine" où chaque utilisateurs peut partager un streaming en direct et discuter en direct par chat. Réalisé en groupe de 5 personnes.`,
     techno: [html, css, javascript, react, redux, nodejs],
     isOnline: true,
