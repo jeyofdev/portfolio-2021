@@ -27,31 +27,18 @@ const Contact = () => {
               <FaShareAltSquare />
             </span>
             <p>
-              <a
-                href="https://github.com/jeyofdev"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="https://github.com/jeyofdev" target="blank">
                 <FaGithubSquare />
               </a>
-              <a
-                href="mailto:jgregoire.pro@gmail.com"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="mailto:jgregoire.pro@gmail.com" target="blank">
                 <FaEnvelopeOpen />
               </a>
-              <a
-                href="https://twitter.com/JeremyGregoire"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="https://twitter.com/JeremyGregoire" target="blank">
                 <FaTwitterSquare />
               </a>
               <a
                 href="https://www.linkedin.com/in/jeremy-gregoire/"
-                target="_blank"
-                rel="noreferrer"
+                target="blank"
               >
                 <FaLinkedin />
               </a>
