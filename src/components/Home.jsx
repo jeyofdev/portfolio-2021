@@ -37,29 +37,33 @@ const Home = () => {
           <p className="social">
             <a
               href="https://github.com/jeyofdev"
-              target="blank"
+              target="_blank"
               className="social-link"
+              rel="noreferrer"
             >
               <FaGithubSquare className="social" />
             </a>
             <a
               href="mailto:jgregoire.pro@gmail.com"
-              target="blank"
+              target="_blank"
               className="social-link"
+              rel="noreferrer"
             >
               <FaEnvelopeOpen className="social" />
             </a>
             <a
               href="https://twitter.com/JeremyGregoire"
-              target="blank"
+              target="_blank"
               className="social-link"
+              rel="noreferrer"
             >
               <FaTwitterSquare className="social" />
             </a>
             <a
-              href="https://www.linkedin.com/in/jeremy-gr%C3%A9goire-719130203/"
-              target="blank"
+              href="https://www.linkedin.com/in/jeremy-gregoire/"
+              target="_blank"
               className="social-link"
+              rel="noreferrer"
             >
               <FaLinkedin className="social" />
             </a>
