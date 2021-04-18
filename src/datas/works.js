@@ -1,6 +1,7 @@
 import mysterium from '../img/portfolio/mysterium.png';
 import hackathon2021 from '../img/portfolio/hackathon-2.png';
 import babyplace from '../img/portfolio/babyplace.png';
+import devchallenges from '../img/portfolio/devchallenges.svg';
 
 import html from '../img/skills/icons/html.svg';
 import css from '../img/skills/icons/css.svg';
@@ -51,6 +52,15 @@ const works = [
     techno: [html, css, javascript, react, redux, nodejs],
     isOnline: true,
     link: 'https://cook-eat.netlify.app/',
+  },
+  {
+    id: 4,
+    image: devchallenges,
+    title: 'Challenge dev',
+    content: `Quelques petits challenges réalisés via le site devchallenges.io.`,
+    techno: [html, css, javascript, react],
+    isOnline: true,
+    link: 'https://devchallenges.io/portfolio/jeyofdev',
   },
 ];
 

@@ -3,6 +3,7 @@ import backEnd from '../img/skills/back-end.jpg';
 import wordpress from '../img/skills/wordpress.jpg';
 import design from '../img/skills/design.jpg';
 import workflow from '../img/skills/workflow.jpg';
+import next from '../img/skills/next.jpg';
 
 import html from '../img/skills/icons/html.svg';
 import css from '../img/skills/icons/css.svg';
@@ -34,61 +35,46 @@ import photoshop from '../img/skills/icons/photoshop.svg';
 import illustrator from '../img/skills/icons/illustrator.svg';
 import figma from '../img/skills/icons/figma.svg';
 
+import reactNative from '../img/skills/icons/react-native.svg';
+import nextjs from '../img/skills/icons/nextjs.svg';
+import angular from '../img/skills/icons/angular.svg';
+
 const skills = [
   {
     id: 1,
     image: frontEnd,
     title: 'Développeur front-end',
-    content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-    gravida, sapien eget eleifend interdum, erat sapien facilisis
-    enim, nec accumsan nibh lectus nec nisl. Phasellus fringilla,
-    ex ut dictum cursus, dui lorem volutpat nisl, non vulputate
-    ante ligula sed urna. Nunc mollis mattis efficitur.`,
     icons: [html, css, sass, javascript, react, redux, yarn, npm, webpack],
   },
   {
     id: 2,
     image: backEnd,
     title: 'Développeur Back-end',
-    content: `Duis non lectus non risus bibendum pulvinar eu sit amet erat.
-    Curabitur sit amet dui eu nulla tempus eleifend. Quisque vel
-    posuere justo, consequat vehicula lacus. Nulla rutrum nulla
-    lorem, in vehicula dui condimentum sit amet. Suspendisse
-    bibendum quis mi in euismod. Fusce vel congue nisi.`,
     icons: [php, symfony, composer, nodejs, mysql, express, jwt],
   },
   {
     id: 3,
     image: wordpress,
     title: 'Développeur Wordpress',
-    content: `Nullam non tellus hendrerit turpis pretium suscipit sit amet a
-    nisl. Donec non purus non justo euismod venenatis vel eget
-    ligula. Aliquam interdum nec nulla in viverra. Quisque
-    ullamcorper purus eget malesuada tempus. Proin vulputate
-    ultricies sapien, in vulputate mi imperdiet ac.`,
     icons: [wordpressLogo],
   },
   {
     id: 4,
     image: workflow,
     title: 'Workflow',
-    content: `Nullam non tellus hendrerit turpis pretium suscipit sit amet a
-    nisl. Donec non purus non justo euismod venenatis vel eget
-    ligula. Aliquam interdum nec nulla in viverra. Quisque
-    ullamcorper purus eget malesuada tempus. Proin vulputate
-    ultricies sapien, in vulputate mi imperdiet ac.`,
     icons: [git, trello, postman, slack],
   },
   {
     id: 5,
     image: design,
     title: 'Design',
-    content: `Nullam non tellus hendrerit turpis pretium suscipit sit amet a
-    nisl. Donec non purus non justo euismod venenatis vel eget
-    ligula. Aliquam interdum nec nulla in viverra. Quisque
-    ullamcorper purus eget malesuada tempus. Proin vulputate
-    ultricies sapien, in vulputate mi imperdiet ac.`,
     icons: [photoshop, illustrator, figma],
+  },
+  {
+    id: 6,
+    image: next,
+    title: 'Veille actuelle et/ou prochaine',
+    icons: [reactNative, nextjs, angular],
   },
 ];
 

@@ -44,7 +44,6 @@ const Skill = ({
           <div className="content">
             <span className="number">{getNumbers()}</span>
             <h2>{data.title}</h2>
-            {/* <p>{data.content}</p> */}
             <p>
               {data.icons.map((icon) => (
                 <img src={icon} />
