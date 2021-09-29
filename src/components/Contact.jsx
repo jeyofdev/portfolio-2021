@@ -8,20 +8,14 @@ import {
   FaLinkedin,
 } from 'react-icons/fa';
 import '../styles/components/contact.scss';
-import profile from '../img/jey026.png';
 
 const Contact = () => {
   return (
     <div className="contact container">
-      <div className="content">
-        <div className="contact-content">
-          <div className="contact-profile">
-            <img src={profile} alt="" />
-          </div>
-        </div>
+      <h1 className="contact-title">Pour me contacter</h1>
 
+      <div className="content">
         <div className="contact">
-          <h3 className="contact-title">Pour me contacter</h3>
           <div className="contact-item social">
             <span className="icon">
               <FaShareAltSquare />
@@ -59,7 +53,6 @@ const Contact = () => {
             <a href="mailto:jgregoire.pro@gmail.com">jgregoire.pro@gmail.com</a>
           </div>
         </div>
-        <div className="contact-bg" />
       </div>
     </div>
   );
