@@ -30,7 +30,7 @@
 .skills .skills-items .skill {
   @include make-flex(null, center);
   position: relative;
-  margin: 10rem 0;
+  margin: 13rem 0;
 
   @include media-queries-up('md') {
     display: block;
@@ -154,9 +154,8 @@
     padding: 1rem 0;
   }
 
-  p {
+  div {
     @extend %p;
-    max-width: 280px;
 
     img {
       @extend %icon;
