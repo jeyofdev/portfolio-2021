@@ -138,6 +138,95 @@
 }
 
 /* ========================
+    HOME BOTTOM
+======================== */
+.home-bottom {
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  animation: bounceIn 0.3s 2.6s forwards;
+
+  .btn-open-modal {
+    margin-top: 2rem;
+    background: $dark;
+    color: $light;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+/* ========================
+    HOME MODAL
+======================== */
+.modal-close {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.modal-content > h3 {
+  font-family: $font-family-third;
+  color: $dark !important;
+  position: relative;
+  font-size: 2.25em;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: $dark;
+    margin: 0 auto;
+    margin-top: 1.25rem;
+  }
+}
+
+.modal-content .intro {
+  font-family: $font-family-content;
+  margin-bottom: 2em;
+  font-size: 1.25em;
+  font-style: italic;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.modal-content .modal-links {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 3rem;
+  flex-direction: column;
+
+  @include media-queries-up('md') {
+    flex-direction: row;
+  }
+
+  .modal-link {
+    padding: 0.75rem 1.25rem;
+    background: $dark;
+    font-family: $font-family-content;
+    color: $light;
+    margin: 0 auto 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+
+    @include media-queries-up('md') {
+      margin: 0 1rem 0 0;
+    }
+  }
+}
+
+/* ========================
     HOME IMAGE
 ======================== */
 .home-bg {
