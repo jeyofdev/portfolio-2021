@@ -3,7 +3,7 @@
  *
  * @param {number} number
  */
-const getNumberWithZero = (number) => {
+const getNumberWithZero = (number: number) => {
   return number < 10 ? `0${number}` : number;
 };
 

@@ -17,7 +17,7 @@ Modal.setAppElement('#root');
 
 const modalStyles = {
   overlay: {
-    position: 'fixed',
+    // position: 'fixed',
     top: 0,
     left: 0,
     right: 0,
@@ -26,7 +26,7 @@ const modalStyles = {
     zIndex: 1000,
   },
   content: {
-    position: 'absolute',
+    // position: 'absolute',
     left: '50%',
     top: '50%',
     right: 'auto',
@@ -38,7 +38,7 @@ const modalStyles = {
     border: 'none',
     background: '#fff',
     overflow: 'auto',
-    WebkitOverflowScrolling: 'touch',
+    // WebkitOverflowScrolling: 'touch',
     borderRadius: '7px',
     outline: 'none',
     padding: '20px',
@@ -46,7 +46,7 @@ const modalStyles = {
 };
 
 const Home = () => {
-  const [modalIsOpen, setIsOpen] = useState(false);
+  const [modalIsOpen, setIsOpen] = useState<boolean>(false);
 
   const handleOpenModal = () => {
     setIsOpen(true);
@@ -89,6 +89,7 @@ const Home = () => {
             >
               <FaGithubSquare className="social" />
             </a>
+
             <a
               href="mailto:jgregoire.pro@gmail.com"
               target="blank"
@@ -96,6 +97,7 @@ const Home = () => {
             >
               <FaEnvelopeOpen className="social" />
             </a>
+
             <a
               href="https://twitter.com/JeremyGregoire"
               target="blank"
@@ -103,6 +105,7 @@ const Home = () => {
             >
               <FaTwitterSquare className="social" />
             </a>
+
             <a
               href="https://www.linkedin.com/in/jeremy-gregoire/"
               target="blank"
@@ -144,7 +147,7 @@ const Home = () => {
               </p>
 
               {aboutDatas.map((data) => (
-                <ModalText key={data.key} title={data.title}>
+                <ModalText key={data.id} title={data.title}>
                   {data.content}
                 </ModalText>
               ))}

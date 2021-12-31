@@ -1,8 +1,9 @@
+/* eslint-disable object-curly-newline */
 import React from 'react';
-import PropTypes from 'prop-types';
 import '../../styles/components/reusable/button.scss';
+import { IButtonProps } from '../../interfaces/reusable.interface';
 
-const Button = ({ label, className, url, isDisable }) => {
+const Button = ({ label, className, url, isDisable }: IButtonProps) => {
   return (
     <a
       href={url}
@@ -14,13 +15,6 @@ const Button = ({ label, className, url, isDisable }) => {
       <span>{label}</span>
     </a>
   );
-};
-
-Button.propTypes = {
-  label: PropTypes.string.isRequired,
-  className: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
-  isDisable: PropTypes.bool.isRequired,
 };
 
 export default Button;

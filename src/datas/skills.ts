@@ -82,7 +82,7 @@ const skills = [
     id: 4,
     image: workflow,
     title: 'Workflow',
-    icons: [git, trello, postman, slack],
+    icons: [git, trello, slack, postman],
   },
   {
     id: 5,

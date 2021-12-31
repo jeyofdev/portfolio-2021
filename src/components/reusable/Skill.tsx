@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Reveal from 'react-awesome-reveal';
 
 /* eslint-disable */
@@ -7,6 +6,7 @@ import { keyframes } from '@emotion/react';
 /* eslint-disable */
 import useWindowSize from '../../hook/useWindowSize';
 import getNumberWithZero from '../../utils/numbers';
+import { ISkillProps } from '../../interfaces/reusable.interface';
 
 const Skill = ({
   data,
@@ -15,7 +15,7 @@ const Skill = ({
   animFullscreen,
   anim80,
   animContent,
-}) => {
+}: ISkillProps) => {
   const size = useWindowSize();
 
   /**
@@ -31,7 +31,7 @@ const Skill = ({
     <div className={`skill ${data.id % 2 === 0 && 'inverse'}`}>
       <Reveal
         delay={500}
-        keyframes={size.width >= 768 ? anim80 : animFullscreen}
+        keyframes={size?.width >= 768 ? anim80 : animFullscreen}
         cascade
       >
         <div
@@ -54,15 +54,6 @@ const Skill = ({
       </Reveal>
     </div>
   );
-};
-
-Skill.propTypes = {
-  data: PropTypes.shape().isRequired,
-  currentNumber: PropTypes.number.isRequired,
-  totalNumber: PropTypes.number.isRequired,
-  animFullscreen: PropTypes.shape().isRequired,
-  anim80: PropTypes.shape().isRequired,
-  animContent: PropTypes.shape().isRequired,
 };
 
 export default Skill;

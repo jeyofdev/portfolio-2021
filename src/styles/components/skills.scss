@@ -157,6 +157,11 @@
   div {
     @extend %p;
 
+    > div {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
     img {
       @extend %icon;
 

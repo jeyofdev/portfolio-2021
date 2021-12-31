@@ -1,15 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import getNumberWithZero from '../../utils/numbers';
 import Button from './Button';
+import { IWorkProps } from '../../interfaces/reusable.interface';
 
-const Work = ({ data, currentNumber, totalNumber }) => {
+const Work = ({ data, currentNumber, totalNumber }: IWorkProps) => {
   /**
    * Return current number and total number
    */
   const getNumbers = () => {
     return `${getNumberWithZero(currentNumber)}/${getNumberWithZero(
-      totalNumber
+      totalNumber,
     )}`;
   };
 
@@ -26,7 +26,7 @@ const Work = ({ data, currentNumber, totalNumber }) => {
             <h2>{data.title}</h2>
             <p className="description">{data.content}</p>
             <p className="logos">
-              {data.techno.map((techno) => (
+              {data.techno.map((techno: string) => (
                 <img src={techno} alt="icon" />
               ))}
             </p>
@@ -39,21 +39,13 @@ const Work = ({ data, currentNumber, totalNumber }) => {
                 isDisable={data.isOnline}
               />
             ) : (
-              <span className="is-disabled" type="button">
-                Bientôt en ligne
-              </span>
+              <span className="is-disabled">Bientôt en ligne</span>
             )}
           </div>
         </div>
       </div>
     </div>
   );
-};
-
-Work.propTypes = {
-  data: PropTypes.shape().isRequired,
-  currentNumber: PropTypes.number.isRequired,
-  totalNumber: PropTypes.number.isRequired,
 };
 
 export default Work;
