@@ -22,3 +22,16 @@ export interface IAbout {
   title: string;
   content: string;
 }
+
+export interface ISocial {
+  id: number;
+  href: string;
+  title: string;
+}
+
+export interface INavItem {
+  id: number;
+  title: string;
+  subtitle: string;
+  href: string;
+}

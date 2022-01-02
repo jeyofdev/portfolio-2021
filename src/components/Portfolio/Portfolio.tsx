@@ -1,11 +1,12 @@
 import React from 'react';
 import OwlCarousel from 'react-owl-carousel';
-import works from '../datas/works';
-import Work from './reusable/Work';
-import Loader from './reusable/Loader';
+import works from '../../datas/works';
+import Work from './Work';
+import Loader from '../reusable/Loader';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-import '../styles/components/portfolio.scss';
+import '../../styles/components/portfolio.scss';
+import { IWork } from '../../interfaces/items.interface';
 
 const Portfolio = () => {
   return (
@@ -23,7 +24,7 @@ const Portfolio = () => {
         dots={false}
         animateOut="fadeOut"
       >
-        {works.map((work) => (
+        {works.map((work: IWork) => (
           <Work
             key={work.id}
             data={work}

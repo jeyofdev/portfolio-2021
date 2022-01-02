@@ -1,49 +1,16 @@
 import React from 'react';
-import { keyframes } from '@emotion/react';
-import skills from '../datas/skills';
-import Skill from './reusable/Skill';
-import '../styles/components/skills.scss';
-
-const FadeInWidth = keyframes`
-  0% {
-    width: 0%;
-  }
-  50% {
-    width: 80%;
-  }
-  100% {
-    width: 80%;
-  }
-`;
-
-const FadeInWidth100 = keyframes`
-  0% {
-    width: 0%;
-  }
-  50% {
-    width: 100%;
-  }
-  100% {
-    width: 100%;
-  }
-`;
-
-const FadeIn = keyframes`
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-`;
+import skills from '../../datas/skills';
+import Skill from './Skill';
+import { FadeIn, FadeInWidth, FadeInWidth100 } from './Skills.animate';
+import { ISkill } from '../../interfaces/items.interface';
+import '../../styles/components/skills.scss';
 
 const Skills = () => {
   return (
     <div className="skills container">
       <h1 className="skills-title">compétences</h1>
       <div className="skills-items">
-        {skills.map((skill) => (
+        {skills.map((skill: ISkill) => (
           <Skill
             key={skill.id}
             data={skill}

@@ -1,6 +1,6 @@
 import React from 'react';
 import getNumberWithZero from '../../utils/numbers';
-import Button from './Button';
+import Button from '../reusable/Button';
 import { IWorkProps } from '../../interfaces/reusable.interface';
 
 const Work = ({ data, currentNumber, totalNumber }: IWorkProps) => {
@@ -29,8 +29,9 @@ const Work = ({ data, currentNumber, totalNumber }: IWorkProps) => {
             <h2>{data.title}</h2>
             <p className="description">{data.content}</p>
             <p className="logos">
-              {data.techno.map((techno: string) => (
-                <img src={techno} alt="icon" />
+              {data.techno.map((techno: string, index) => (
+                // eslint-disable-next-line react/no-array-index-key
+                <img key={index} src={techno} alt="icon" />
               ))}
             </p>
 

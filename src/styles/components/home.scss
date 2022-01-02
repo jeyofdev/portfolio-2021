@@ -233,7 +233,7 @@
   }
 }
 
-.modal-content {
+.about-text {
   overflow-y: scroll;
   height: calc(100vh - (5rem + 1.25rem));
   margin-bottom: 2rem;
@@ -249,7 +249,7 @@
   }
 }
 
-.modal-content > h3 {
+.about-text > h3 {
   font-family: $font-family-third;
   color: $dark !important;
   position: relative;
@@ -272,7 +272,7 @@
   }
 }
 
-.modal-content .intro {
+.about-text .intro {
   font-family: $font-family-content;
   margin-bottom: 2em;
   font-size: 1.25em;
@@ -281,7 +281,7 @@
   text-align: center;
 }
 
-.modal-content .modal-links {
+.about-text .links {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -293,7 +293,7 @@
     flex-direction: row;
   }
 
-  .modal-link {
+  .links {
     padding: 0.75rem 1.25rem;
     background: $dark;
     font-family: $font-family-content;

@@ -69,7 +69,7 @@ const works = [
   {
     id: 4,
     image: devchallengeUnsplash,
-    title: 'DevChallenge - My unsplash',
+    title: 'My unsplash',
     content:
       'Petit challenge via le site devChallenge. Le but était de réaliser un petit clone du site d\'images libre de droit "unsplash".',
     techno: [html, css, javascript, react, nextjs, typescript, tailwindcss],
@@ -82,7 +82,7 @@ const works = [
   {
     id: 5,
     image: devchallengeWeatherApp,
-    title: 'DevChallenge - Weather app ',
+    title: 'Weather app ',
     content:
       "Petit challenge via le site devChallenge. Le but était de mettre en place une petite application permettant de connaître la météo en fonction d'une ville définie par l'utilisateur ou par géolocalisation.",
     techno: [html, css, javascript, react, redux],
@@ -91,22 +91,10 @@ const works = [
     mockup: mockupDevchallengeWeatherApp,
     code: 'https://github.com/jeyofdev/devchallenges--weather-app',
   },
-  // {
-  //   id: 6,
-  //   image: devchallengeUnsplash,
-  //   title: 'DevChallenge - Country Quiz',
-  //   content:
-  //     'Quelques petits challenges réalisés via le site devchallenges.io.',
-  //   techno: [html, css, javascript, react],
-  //   isOnline: true,
-  //   link: 'https://jeyofdev.github.io/devchallenges--country-quiz/',
-  //   mockup: mockupDevchallengeUnsplash,
-  // externalLink: false,
-  // },
   {
-    id: 7,
+    id: 6,
     image: devchallengeTodoList,
-    title: 'DevChallenge - Todo app',
+    title: 'Todo app',
     content:
       'Petit challenge via le site devChallenge. Le but était de mettre en place une simple todo list avec React.',
     techno: [html, css, javascript, react],
@@ -116,9 +104,9 @@ const works = [
     code: 'https://github.com/jeyofdev/devchallenges--todo-app',
   },
   {
-    id: 8,
+    id: 7,
     image: devchallengeWinbnb,
-    title: 'DevChallenge - Windbnb',
+    title: 'Windbnb',
     content:
       "Petit challenge via le site devChallenge. Le but était d'implémenter quelques petites fonctionnalités avec React.",
     techno: [html, css, javascript, react],
@@ -128,9 +116,9 @@ const works = [
     code: 'https://github.com/jeyofdev/devchallenges--windbnb',
   },
   {
-    id: 9,
+    id: 8,
     image: devchallengeEdieHomepage,
-    title: 'DevChallenge - Edie homepage',
+    title: 'Edie homepage',
     content: 'Petit challenge via le site devChallenge.',
     techno: [html, css, javascript, react, webpack],
     isOnline: true,
@@ -139,7 +127,7 @@ const works = [
     code: 'https://github.com/jeyofdev/devchallenges--edie-homepage',
   },
   {
-    id: 10,
+    id: 9,
     image: codewars,
     title: 'Codewars',
     content: "Quelques petits exercices d'algo réalisé via codewars.",

@@ -45,8 +45,8 @@ const Skill = ({
             <span className="number">{getNumbers()}</span>
             <h2>{data.title}</h2>
             <div>
-              {data.icons.map((icon) => (
-                <img src={icon} />
+              {data.icons.map((icon, index) => (
+                <img key={index} src={icon} />
               ))}
             </div>
           </div>
