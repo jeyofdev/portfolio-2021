@@ -18,7 +18,10 @@ const Work = ({ data, currentNumber, totalNumber }: IWorkProps) => {
       <div
         className="work-image"
         style={{ backgroundImage: `url(${data.image})` }}
-      />
+      >
+        <div className="mask" />
+        <img src={data.mockup} alt={`mockup ${data.title}`} />
+      </div>
       <div className="work-content">
         <div className="text-inner">
           <span className="number">{getNumbers()}</span>
@@ -40,6 +43,15 @@ const Work = ({ data, currentNumber, totalNumber }: IWorkProps) => {
               />
             ) : (
               <span className="is-disabled">Bientôt en ligne</span>
+            )}
+
+            {data.code && (
+              <Button
+                label="Le code"
+                className="btn-more"
+                url={data.code}
+                isDisable={false}
+              />
             )}
           </div>
         </div>

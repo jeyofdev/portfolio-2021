@@ -27,13 +27,21 @@
 
     &.work-image {
       min-height: 100vh;
+
+      > img {
+        margin: 0 auto;
+        margin-top: 4rem;
+        width: 90%;
+        z-index: 1;
+        max-width: 650px;
+      }
     }
 
     @include media-queries-down('md') {
       &.work-content {
         position: absolute;
         bottom: 0;
-        max-height: 60%;
+        max-height: 55%;
         overflow-y: scroll;
       }
     }
@@ -44,10 +52,30 @@
 
       &.work-image {
         width: 60%;
+
+        > img {
+          max-width: 350px;
+        }
       }
 
       &.work-content {
         width: 40%;
+      }
+    }
+
+    @include media-queries-up('lg') {
+      &.work-image {
+        > img {
+          max-width: 450px;
+        }
+      }
+    }
+
+    @include media-queries-up('xl') {
+      &.work-image {
+        > img {
+          max-width: 560px;
+        }
       }
     }
   }
@@ -62,6 +90,17 @@
   background-position: top center;
   background-repeat: no-repeat;
   position: relative;
+
+  > .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    min-height: 100vh;
+    opacity: 0.85;
+    z-index: 0;
+  }
 }
 
 /* ========================
@@ -74,7 +113,8 @@
   margin: 0 auto;
   padding: 1.5rem;
   opacity: 0;
-  transition: all 0.7s ease 0.8s;
+  transition: all 0.5s ease 0.4s;
+  z-index: 2;
 
   @include media-queries-down('md') {
     width: 90%;
@@ -90,12 +130,12 @@
 
 .portfolio .owl-item.active .work .text-inner {
   margin-top: 0;
-  transition: all 0.7s ease 0.8s;
-  animation: fadeInRight 0.5s 0.8s forwards;
+  transition: all 0.5s ease 0.4s;
+  animation: fadeInRight 0.5s 0.4s forwards;
 
   @include media-queries-up('md') {
     margin-top: 0;
-    margin-left: -5em;
+    margin-left: -17%;
   }
 }
 

@@ -13,6 +13,8 @@ export interface IWork {
   techno: string[];
   isOnline: boolean;
   link: string;
+  mockup: string;
+  code?: string;
 }
 
 export interface IAbout {
