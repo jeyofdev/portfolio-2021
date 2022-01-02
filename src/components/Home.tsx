@@ -9,135 +9,110 @@ import {
   FaTimes,
 } from 'react-icons/fa';
 import '../styles/components/home.scss';
-import Modal from 'react-modal';
 import ModalText from './reusable/ModalText';
 import aboutDatas from '../datas/about';
-
-Modal.setAppElement('#root');
-
-const modalStyles = {
-  overlay: {
-    // position: 'fixed',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    backgroundColor: 'rgba(31, 30, 30, .8)',
-    zIndex: 1000,
-  },
-  content: {
-    // position: 'absolute',
-    left: '50%',
-    top: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    transform: 'translate(-50%, -50%)',
-    width: '80%',
-    maxWidth: '750px',
-    maxHeight: '80vh',
-    border: 'none',
-    background: '#fff',
-    overflow: 'auto',
-    // WebkitOverflowScrolling: 'touch',
-    borderRadius: '7px',
-    outline: 'none',
-    padding: '20px',
-  },
-};
+import Profile from '../img/profile-photo.jpg';
 
 const Home = () => {
-  const [modalIsOpen, setIsOpen] = useState<boolean>(false);
+  const [aboutIsOpen, setAboutIsOpen] = useState<string>('');
 
   const handleOpenModal = () => {
-    setIsOpen(true);
+    setAboutIsOpen('anim-up');
   };
 
   const handleCloseModal = () => {
-    setIsOpen(false);
+    setAboutIsOpen('anim-down');
   };
 
   return (
     <div className="home">
-      <div className="home-content">
-        <div className="intro">
-          <h3 className="home-name">
-            <span>Bonjour</span>
-            <span>
-              <FaStar className="icon" />
-            </span>
-            <span>je suis jérémy grégoire</span>
-          </h3>
+      <div className="home-intro">
+        <div className="home-content">
+          <div className="intro">
+            <h3 className="home-name">
+              <span>Bonjour</span>
+              <span>
+                <FaStar className="icon" />
+              </span>
+              <span>je suis jérémy grégoire</span>
+            </h3>
 
-          <h1 className="home-job">
-            <span>développeur</span>
-            <span>Full stack</span>
-          </h1>
+            <h1 className="home-job">
+              <span>développeur</span>
+              <span>Full stack</span>
+            </h1>
 
-          <h3 className="home-city">
-            <span>Bordeaux</span>
-            <span>
-              <FaStar className="icon" />
-            </span>
-            <span>France</span>
-          </h3>
+            <h3 className="home-city">
+              <span>Bordeaux</span>
+              <span>
+                <FaStar className="icon" />
+              </span>
+              <span>France</span>
+            </h3>
 
-          <p className="social">
-            <a
-              href="https://github.com/jeyofdev"
-              target="blank"
-              className="social-link"
-            >
-              <FaGithubSquare className="social" />
-            </a>
+            <p className="social">
+              <a
+                href="https://github.com/jeyofdev"
+                target="blank"
+                className="social-link"
+              >
+                <FaGithubSquare className="social" />
+              </a>
 
-            <a
-              href="mailto:jgregoire.pro@gmail.com"
-              target="blank"
-              className="social-link"
-            >
-              <FaEnvelopeOpen className="social" />
-            </a>
+              <a
+                href="mailto:jgregoire.pro@gmail.com"
+                target="blank"
+                className="social-link"
+              >
+                <FaEnvelopeOpen className="social" />
+              </a>
 
-            <a
-              href="https://twitter.com/JeremyGregoire"
-              target="blank"
-              className="social-link"
-            >
-              <FaTwitterSquare className="social" />
-            </a>
+              <a
+                href="https://twitter.com/JeremyGregoire"
+                target="blank"
+                className="social-link"
+              >
+                <FaTwitterSquare className="social" />
+              </a>
 
-            <a
-              href="https://www.linkedin.com/in/jeremy-gregoire/"
-              target="blank"
-              className="social-link"
-            >
-              <FaLinkedin className="social" />
-            </a>
-          </p>
+              <a
+                href="https://www.linkedin.com/in/jeremy-gregoire/"
+                target="blank"
+                className="social-link"
+              >
+                <FaLinkedin className="social" />
+              </a>
+            </p>
 
-          <div className="home-bottom">
-            <button
-              type="button"
-              className="btn-open-modal"
-              onClick={handleOpenModal}
-            >
-              + d&apos;info
-            </button>
+            <div className="home-bottom">
+              <button
+                type="button"
+                className="btn-open-modal"
+                onClick={handleOpenModal}
+              >
+                + d&apos;info
+              </button>
+            </div>
           </div>
+        </div>
 
-          <Modal
-            isOpen={modalIsOpen}
-            onRequestClose={handleCloseModal}
-            style={modalStyles}
+        <div className="home-bg">
+          <div className="bg-image" />
+        </div>
+
+        <div className={`content-about ${aboutIsOpen}`}>
+          <button
+            type="button"
+            className="modal-close"
+            onClick={handleCloseModal}
           >
-            <button
-              type="button"
-              className="modal-close"
-              onClick={handleCloseModal}
-            >
-              <FaTimes />
-            </button>
+            <FaTimes />
+          </button>
 
+          <div className="container about">
+            <div className="about-photo">
+              <img src={Profile} alt="jeremy gregoire profil" />
+            </div>
             <div className="modal-content">
               <h3>Qui suis-je ?</h3>
               <p className="intro">
@@ -161,12 +136,8 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-          </Modal>
+          </div>
         </div>
-      </div>
-
-      <div className="home-bg">
-        <div className="bg-image" />
       </div>
     </div>
   );
