@@ -43,8 +43,8 @@ import photoshop from '../img/skills/icons/photoshop.svg';
 import illustrator from '../img/skills/icons/illustrator.svg';
 import figma from '../img/skills/icons/figma.svg';
 
-import reactNative from '../img/skills/icons/react-native.svg';
 import angular from '../img/skills/icons/angular.svg';
+import vuejs from '../img/skills/icons/vuejs.svg';
 
 const skills = [
   {
@@ -94,7 +94,7 @@ const skills = [
     id: 6,
     image: next,
     title: 'Veille actuelle et/ou prochaine',
-    icons: [docker, grapQl, reactNative, angular],
+    icons: [docker, grapQl, angular, vuejs],
   },
 ];
 
