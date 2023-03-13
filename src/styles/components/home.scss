@@ -237,6 +237,23 @@
   overflow-y: scroll;
   height: calc(100vh - (5rem + 1.25rem));
   margin-bottom: 2rem;
+  scrollbar-color: $dark transparent;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: $dark;
+    border-radius: 20px;
+    border: none;
+  }
+  
 
   @include media-queries-up('md') {
     height: calc(100vh - (10rem + 2rem));

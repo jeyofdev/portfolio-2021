@@ -17,11 +17,13 @@ import materialUI from '../img/skills/icons/material-ui.svg';
 import react from '../img/skills/icons/react.svg';
 import reactNative from '../img/skills/icons/react-native.svg';
 import nextjs from '../img/skills/icons/nextjs.svg';
+import expo from '../img/skills/icons/expo.svg';
 import redux from '../img/skills/icons/redux.svg';
 import apollo from '../img/skills/icons/apollo.svg';
 import yarn from '../img/skills/icons/yarn.svg';
 import npm from '../img/skills/icons/npm.svg';
 import webpack from '../img/skills/icons/webpack.svg';
+import jest from '../img/skills/icons/jest.svg';
 
 import php from '../img/skills/icons/php.svg';
 import symfony from '../img/skills/icons/symfony.svg';
@@ -39,6 +41,7 @@ import nodejs from '../img/skills/icons/node-js.svg';
 import wordpressLogo from '../img/skills/icons/wordpress.svg';
 
 import git from '../img/skills/icons/git.svg';
+import github from '../img/skills/icons/github.svg';
 import trello from '../img/skills/icons/trello.svg';
 import postman from '../img/skills/icons/postman.svg';
 import slack from '../img/skills/icons/slack.svg';
@@ -65,12 +68,14 @@ const skills = [
       typescript,
       react,
       reactNative,
+      expo,
       nextjs,
       redux,
       apollo,
       yarn,
       npm,
       webpack,
+      jest,
       docker,
     ],
   },
@@ -91,6 +96,7 @@ const skills = [
       express,
       jwt,
       prisma,
+      jest,
       docker,
     ],
   },
@@ -104,7 +110,7 @@ const skills = [
     id: 4,
     image: workflow,
     title: 'Workflow',
-    icons: [git, trello, slack, postman, apollo],
+    icons: [git, github, trello, slack, postman, apollo],
   },
   {
     id: 5,

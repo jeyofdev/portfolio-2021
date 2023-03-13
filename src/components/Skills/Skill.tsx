@@ -46,7 +46,10 @@ const Skill = ({
             <h2>{data.title}</h2>
             <div>
               {data.icons.map((icon, index) => (
-                <img key={index} src={icon} />
+                <img
+                  key={index}
+                  src={icon}
+                />
               ))}
             </div>
           </div>
