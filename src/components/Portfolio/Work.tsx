@@ -43,7 +43,7 @@ const Work = ({ data, currentNumber, totalNumber }: IWorkProps) => {
                 isDisable={data.isOnline}
               />
             ) : (
-              <span className="is-disabled">Bientôt en ligne</span>
+              <span className="is-disabled btn-more py-3">Bientôt en ligne</span>
             )}
 
             {data.code && (

@@ -40,7 +40,7 @@ const works = [
     content:
       'Projet formation de 2 mois à la Wild Code School de Bordeaux. Digitalisation du jeu de société populaire "Mysterium. Le but était d\'adapter le jeu en version navigateur web. Réalisé dans un groupe de 5 personnes.',
     techno: [html, css, javascript, react],
-    isOnline: true,
+    isOnline: false,
     link: 'https://mysterium-app.herokuapp.com/',
     mockup: mockupMysterium,
   },
@@ -86,7 +86,7 @@ const works = [
     content:
       "Petit challenge via le site devChallenge. Le but était de mettre en place une petite application permettant de connaître la météo en fonction d'une ville définie par l'utilisateur ou par géolocalisation.",
     techno: [html, css, javascript, react, redux],
-    isOnline: true,
+    isOnline: false,
     link: 'https://jeyofdev.github.io/devchallenges--weather-app/',
     mockup: mockupDevchallengeWeatherApp,
     code: 'https://github.com/jeyofdev/devchallenges--weather-app',
