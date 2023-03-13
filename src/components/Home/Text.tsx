@@ -2,10 +2,10 @@ import React from 'react';
 import '../../styles/components/reusable/Text.scss';
 import { ITextProps } from '../../interfaces/reusable.interface';
 
-const Text = ({ title, children }: ITextProps) => {
+const Text = ({ title, children, classname }: ITextProps) => {
   return (
-    <div className="content-bloc">
-      <h4>{title}</h4>
+    <div className={`content-bloc ${classname}`}>
+      {title ? <h4>{title}</h4> : null}
       <p className="content">{children}</p>
     </div>
   );

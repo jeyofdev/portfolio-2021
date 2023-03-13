@@ -9,13 +9,13 @@ const social = [
     href: 'mailto:jgregoire.pro@gmail.com',
     title: 'email',
   },
+  // {
+  //   id: 3,
+  //   href: 'https://twitter.com/JeremyGregoire',
+  //   title: 'twitter',
+  // },
   {
     id: 3,
-    href: 'https://twitter.com/JeremyGregoire',
-    title: 'twitter',
-  },
-  {
-    id: 4,
     href: 'https://www.linkedin.com/in/jeremy-gregoire/',
     title: 'linkedin',
   },

@@ -26,9 +26,11 @@ const About = ({ aboutIsOpen, handleClose }: IAboutProps) => {
           </p>
 
           {aboutDatas.map((data) => (
-            <Text key={data.id} title={data.title}>
-              {data.content}
-            </Text>
+            <div key={data.id}>
+              <Text classname={data?.subContent ? 'mb-2' : ''} title={data.title}>{data.content}</Text>
+
+              {data?.subContent ? <Text>{data.content}</Text> : ''}
+            </div>
           ))}
 
           <div className="links">

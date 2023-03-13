@@ -10,8 +10,9 @@ export interface IButtonProps {
 }
 
 export interface ITextProps {
-  title: string;
+  title?: string;
   children: string;
+  classname?: string;
 }
 
 export interface ISkillProps {
