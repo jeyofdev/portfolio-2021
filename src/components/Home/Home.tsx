@@ -61,7 +61,7 @@ const Home = () => {
                 className="btn-open-modal"
                 onClick={handleOpenModal}
               >
-                + d&apos;info
+                + d&apos;infos
               </button>
             </div>
           </div>
