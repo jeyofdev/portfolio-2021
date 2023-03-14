@@ -1,8 +1,14 @@
+export interface IIcon {
+  src: string;
+  name: string;
+}
+
 export interface ISkill {
   id: number;
   image: string;
   title: string;
-  icons: string[];
+  icons: IIcon[];
+  prefix: string;
 }
 
 export interface IWork {

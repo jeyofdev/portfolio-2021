@@ -1,5 +1,6 @@
 import React from 'react';
 import Reveal from 'react-awesome-reveal';
+import { Tooltip } from 'react-tooltip';
 
 /* eslint-disable */
 import { keyframes } from '@emotion/react';
@@ -46,10 +47,14 @@ const Skill = ({
             <h2>{data.title}</h2>
             <div>
               {data.icons.map((icon, index) => (
-                <img
-                  key={index}
-                  src={icon}
-                />
+                <>
+                  <img id={`${data?.prefix}-${index}`} src={icon?.src} />
+                  <Tooltip
+                    anchorSelect={`#${data?.prefix}-${index}`}
+                    content={icon?.name}
+                    style={{ borderRadius: 8, textTransform: "uppercase" }}
+                  />
+                </>
               ))}
             </div>
           </div>
