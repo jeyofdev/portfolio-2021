@@ -5,6 +5,7 @@ import Text from './Text';
 import aboutDatas from '../../datas/about';
 import Profile from '../../img/profile-photo.jpg';
 import { IAboutProps } from '../../interfaces/reusable.interface';
+import cv from '../../assets/jeremy-gregoire-developpeur-full-stack.pdf';
 
 const About = ({ aboutIsOpen, handleClose }: IAboutProps) => {
   return (
@@ -27,7 +28,12 @@ const About = ({ aboutIsOpen, handleClose }: IAboutProps) => {
 
           {aboutDatas.map((data) => (
             <div key={data.id}>
-              <Text classname={data?.subContent ? 'mb-2' : ''} title={data.title}>{data.content}</Text>
+              <Text
+                classname={data?.subContent ? 'mb-2' : ''}
+                title={data.title}
+              >
+                {data.content}
+              </Text>
 
               {data?.subContent ? <Text>{data.content}</Text> : ''}
             </div>
@@ -40,6 +46,9 @@ const About = ({ aboutIsOpen, handleClose }: IAboutProps) => {
             <Link to="/portfolio" className="links">
               Portfolio
             </Link>
+            <a href={cv} className="links" target="_blank" rel="noreferrer">
+              CV
+            </a>
           </div>
         </div>
       </div>
