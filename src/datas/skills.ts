@@ -4,7 +4,7 @@ import backEnd from '../img/skills/back-end.jpg';
 import wordpress from '../img/skills/wordpress.jpg';
 import design from '../img/skills/design.jpg';
 import workflow from '../img/skills/workflow.jpg';
-// import next from '../img/skills/next.jpg';
+import next from '../img/skills/next.jpg';
 
 // icons
 import html from '../img/skills/icons/html.svg';
@@ -50,8 +50,8 @@ import photoshop from '../img/skills/icons/photoshop.svg';
 import illustrator from '../img/skills/icons/illustrator.svg';
 import figma from '../img/skills/icons/figma.svg';
 
-// import angular from '../img/skills/icons/angular.svg';
-// import vuejs from '../img/skills/icons/vuejs.svg';
+import angular from '../img/skills/icons/angular.svg';
+import vuejs from '../img/skills/icons/vuejs.svg';
 
 const skills = [
   {
@@ -134,13 +134,16 @@ const skills = [
       { src: figma, name: 'figma' },
     ],
   },
-  // {
-  //   id: 6,
-  //   image: next,
-  //   prefix: "next",
-  //   title: 'Veille actuelle et/ou prochaine',
-  //   icons: [docker, grapQl, angular, vuejs],
-  // },
+  {
+    id: 6,
+    image: next,
+    prefix: 'next',
+    title: 'Veille actuelle et/ou prochaine',
+    icons: [
+      { src: angular, name: 'angular' },
+      { src: vuejs, name: 'vuejs' },
+    ],
+  },
 ];
 
 export default skills;
