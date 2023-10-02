@@ -32,7 +32,7 @@ import mysql from '../img/skills/icons/mysql.svg';
 import postgreSQL from '../img/skills/icons/postgresql.svg';
 import mongoDb from '../img/skills/icons/mongodb.svg';
 import express from '../img/skills/icons/express.svg';
-import grapQl from '../img/skills/icons/graphQl.svg';
+import graphQl from '../img/skills/icons/graphQl.svg';
 import jwt from '../img/skills/icons/jwt.svg';
 import prisma from '../img/skills/icons/prisma.svg';
 import docker from '../img/skills/icons/docker.svg';
@@ -93,7 +93,7 @@ const skills = [
       { src: postgreSQL, name: 'postgreSQL' },
       { src: mysql, name: 'mysql' },
       { src: mongoDb, name: 'mongoDb' },
-      { src: grapQl, name: 'graphQl' },
+      { src: graphQl, name: 'graphQl' },
       { src: apollo, name: 'apollo server' },
       { src: express, name: 'express' },
       { src: jwt, name: 'jwt' },

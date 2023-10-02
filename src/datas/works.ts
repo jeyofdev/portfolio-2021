@@ -8,6 +8,7 @@ import devchallengeTodoList from '../img/portfolio/devchallenge-todo-list.png';
 import devchallengeEdieHomepage from '../img/portfolio/devchallenge-edie-homepage.png';
 import codewars from '../img/portfolio/codewars.png';
 import angularAuth from '../img/portfolio/angular-auth-firebase.jpg';
+import movieAppReactGraphql from '../img/portfolio/movie-app-react-graphql.png';
 
 import mockupMysterium from '../img/portfolio/mockup/mysterium.png';
 import mockupBabyplace from '../img/portfolio/mockup/babyplace.png';
@@ -19,6 +20,7 @@ import mockupDevchallengeTodoList from '../img/portfolio/mockup/devchallenge-tod
 import mockupDevchallengeEdieHomepage from '../img/portfolio/mockup/devchallenge-edie-homepage.png';
 import mockupCodewars from '../img/portfolio/mockup/codewars.png';
 import mockupAngularAuth from '../img/portfolio/mockup/angular-auth-firebase.png';
+import mockupMovieAppReactGraphql from '../img/portfolio/mockup/movie-app-react-graphql.png';
 
 import html from '../img/skills/icons/html.svg';
 import css from '../img/skills/icons/css.svg';
@@ -34,21 +36,44 @@ import nextjs from '../img/skills/icons/nextjs.svg';
 import tailwindcss from '../img/skills/icons/tailwindcss.svg';
 import webpack from '../img/skills/icons/webpack.svg';
 import angular from '../img/skills/icons/angular.svg';
+import graphQl from '../img/skills/icons/graphQl.svg';
+import materialUI from '../img/skills/icons/material-ui.svg';
+import apollo from '../img/skills/icons/apollo.svg';
 
 const works = [
   {
     id: 1,
+    image: movieAppReactGraphql,
+    title: 'Movie app react graphql',
+    content:
+      "Projet perso utilisant l'api TMDB et basé sur React, Graphql et Apollo.",
+    techno: [
+      html,
+      css,
+      javascript,
+      typescript,
+      react,
+      materialUI,
+      graphQl,
+      apollo,
+    ],
+    isOnline: true,
+    link: 'https://movie-app-react-graphql.vercel.app/',
+    mockup: mockupMovieAppReactGraphql,
+  },
+  {
+    id: 2,
     image: angularAuth,
     title: 'Angular auth with firebase',
     content:
-      "Projet perso sur un systême d'authentification basé sur Angular et firebase",
+      "Projet perso sur un systême d'authentification basé sur Angular et firebase.",
     techno: [html, css, javascript, typescript, angular],
     isOnline: true,
     link: 'https://auth-angular-firebase.vercel.app/account/signin',
     mockup: mockupAngularAuth,
   },
   {
-    id: 2,
+    id: 3,
     image: mysterium,
     title: 'Mysterium',
     content:
@@ -59,7 +84,7 @@ const works = [
     mockup: mockupMysterium,
   },
   {
-    id: 3,
+    id: 4,
     image: babyplace,
     title: 'Babyplace',
     content:
@@ -70,7 +95,7 @@ const works = [
     mockup: mockupBabyplace,
   },
   {
-    id: 4,
+    id: 5,
     image: hackathon2021,
     title: "Cook'eat",
     content:
@@ -81,7 +106,7 @@ const works = [
     mockup: mockupHackathon2021,
   },
   {
-    id: 5,
+    id: 6,
     image: devchallengeUnsplash,
     title: 'My unsplash',
     content:
@@ -94,7 +119,7 @@ const works = [
     code: 'https://github.com/jeyofdev/devchallenges--my-unsplash',
   },
   {
-    id: 6,
+    id: 7,
     image: devchallengeWeatherApp,
     title: 'Weather app ',
     content:
@@ -106,7 +131,7 @@ const works = [
     code: 'https://github.com/jeyofdev/devchallenges--weather-app',
   },
   {
-    id: 7,
+    id: 8,
     image: devchallengeTodoList,
     title: 'Todo app',
     content:
@@ -118,7 +143,7 @@ const works = [
     code: 'https://github.com/jeyofdev/devchallenges--todo-app',
   },
   {
-    id: 8,
+    id: 9,
     image: devchallengeWinbnb,
     title: 'Windbnb',
     content:
@@ -130,7 +155,7 @@ const works = [
     code: 'https://github.com/jeyofdev/devchallenges--windbnb',
   },
   {
-    id: 9,
+    id: 10,
     image: devchallengeEdieHomepage,
     title: 'Edie homepage',
     content: 'Petit challenge via le site devChallenge.',
@@ -141,7 +166,7 @@ const works = [
     code: 'https://github.com/jeyofdev/devchallenges--edie-homepage',
   },
   {
-    id: 10,
+    id: 11,
     image: codewars,
     title: 'Codewars',
     content: "Quelques petits exercices d'algo réalisé via codewars.",
