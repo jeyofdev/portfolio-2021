@@ -9,6 +9,7 @@ import devchallengeEdieHomepage from '../img/portfolio/devchallenge-edie-homepag
 import codewars from '../img/portfolio/codewars.png';
 import angularAuth from '../img/portfolio/angular-auth-firebase.jpg';
 import movieAppReactGraphql from '../img/portfolio/movie-app-react-graphql.png';
+import estateMinimalistReact from '../img/portfolio/estate-minimalist-react.jpg';
 
 import mockupMysterium from '../img/portfolio/mockup/mysterium.png';
 import mockupBabyplace from '../img/portfolio/mockup/babyplace.png';
@@ -21,6 +22,7 @@ import mockupDevchallengeEdieHomepage from '../img/portfolio/mockup/devchallenge
 import mockupCodewars from '../img/portfolio/mockup/codewars.png';
 import mockupAngularAuth from '../img/portfolio/mockup/angular-auth-firebase.png';
 import mockupMovieAppReactGraphql from '../img/portfolio/mockup/movie-app-react-graphql.png';
+import mockupEstateMinimalistReact from '../img/portfolio/mockup/estate-minimalist-react.png';
 
 import html from '../img/skills/icons/html.svg';
 import css from '../img/skills/icons/css.svg';
@@ -43,6 +45,30 @@ import apollo from '../img/skills/icons/apollo.svg';
 const works = [
   {
     id: 1,
+    image: estateMinimalistReact,
+    title: 'Estate minimalist react',
+    content:
+      "Projet personnel minimaliste basé sur un systême de filtres de maisons et d'appartements.",
+    techno: [html, css, javascript, react, nodejs, materialUI],
+    isOnline: true,
+    link: 'https://estate-minimalist-react.vercel.app/',
+    code: 'https://github.com/jeyofdev/estate-minimalist-react',
+    mockup: mockupEstateMinimalistReact,
+  },
+  {
+    id: 2,
+    image: angularAuth,
+    title: 'Angular auth with firebase',
+    content:
+      "Projet perso sur un systême d'authentification basé sur Angular et firebase.",
+    techno: [html, css, javascript, typescript, angular],
+    isOnline: true,
+    link: 'https://auth-angular-firebase.vercel.app/',
+    code: 'https://github.com/jeyofdev/auth-angular-firebase',
+    mockup: mockupAngularAuth,
+  },
+  {
+    id: 3,
     image: movieAppReactGraphql,
     title: 'Movie app react graphql',
     content:
@@ -59,21 +85,11 @@ const works = [
     ],
     isOnline: true,
     link: 'https://movie-app-react-graphql.vercel.app/',
+    code: 'https://github.com/jeyofdev/movie-app-react-graphql',
     mockup: mockupMovieAppReactGraphql,
   },
   {
-    id: 2,
-    image: angularAuth,
-    title: 'Angular auth with firebase',
-    content:
-      "Projet perso sur un systême d'authentification basé sur Angular et firebase.",
-    techno: [html, css, javascript, typescript, angular],
-    isOnline: true,
-    link: 'https://auth-angular-firebase.vercel.app/account/signin',
-    mockup: mockupAngularAuth,
-  },
-  {
-    id: 3,
+    id: 4,
     image: mysterium,
     title: 'Mysterium',
     content:
@@ -84,7 +100,7 @@ const works = [
     mockup: mockupMysterium,
   },
   {
-    id: 4,
+    id: 5,
     image: babyplace,
     title: 'Babyplace',
     content:
@@ -95,7 +111,7 @@ const works = [
     mockup: mockupBabyplace,
   },
   {
-    id: 5,
+    id: 6,
     image: hackathon2021,
     title: "Cook'eat",
     content:
@@ -106,7 +122,7 @@ const works = [
     mockup: mockupHackathon2021,
   },
   {
-    id: 6,
+    id: 7,
     image: devchallengeUnsplash,
     title: 'My unsplash',
     content:
@@ -119,7 +135,7 @@ const works = [
     code: 'https://github.com/jeyofdev/devchallenges--my-unsplash',
   },
   {
-    id: 7,
+    id: 8,
     image: devchallengeWeatherApp,
     title: 'Weather app ',
     content:
@@ -131,7 +147,7 @@ const works = [
     code: 'https://github.com/jeyofdev/devchallenges--weather-app',
   },
   {
-    id: 8,
+    id: 9,
     image: devchallengeTodoList,
     title: 'Todo app',
     content:
@@ -143,7 +159,7 @@ const works = [
     code: 'https://github.com/jeyofdev/devchallenges--todo-app',
   },
   {
-    id: 9,
+    id: 10,
     image: devchallengeWinbnb,
     title: 'Windbnb',
     content:
@@ -155,7 +171,7 @@ const works = [
     code: 'https://github.com/jeyofdev/devchallenges--windbnb',
   },
   {
-    id: 10,
+    id: 11,
     image: devchallengeEdieHomepage,
     title: 'Edie homepage',
     content: 'Petit challenge via le site devChallenge.',
@@ -166,7 +182,7 @@ const works = [
     code: 'https://github.com/jeyofdev/devchallenges--edie-homepage',
   },
   {
-    id: 11,
+    id: 12,
     image: codewars,
     title: 'Codewars',
     content: "Quelques petits exercices d'algo réalisé via codewars.",
