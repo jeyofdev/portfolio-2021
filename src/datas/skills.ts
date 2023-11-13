@@ -51,6 +51,7 @@ import illustrator from '../img/skills/icons/illustrator.svg';
 import figma from '../img/skills/icons/figma.svg';
 
 import angular from '../img/skills/icons/angular.svg';
+import vuejs from '../img/skills/icons/vuejs.svg';
 import java from '../img/skills/icons/java.svg';
 
 const skills = [
@@ -138,9 +139,10 @@ const skills = [
     id: 6,
     image: next,
     prefix: 'next',
-    title: 'Veille actuelle et/ou prochaine',
+    title: 'Veille actuelle',
     icons: [
       { src: angular, name: 'angular' },
+      { src: vuejs, name: 'vue js' },
       { src: java, name: 'java' },
     ],
   },
