@@ -1,5 +1,5 @@
 /* eslint-disable operator-linebreak */
-import React, { useState } from 'react';
+import { useState } from 'react';
 import navItems from '../../datas/nav';
 import { INavItem } from '../../interfaces/items.interface';
 import '../../styles/components/navbar.scss';
@@ -41,6 +41,7 @@ const Navbar = () => {
           className={`btn-trigger${classnameBtnTrigger}`}
           id="btn-trigger"
           onClick={handleClickBtn}
+          aria-label="btn-trigger"
         >
           <span className="icon" />
           <span className="icon" />
