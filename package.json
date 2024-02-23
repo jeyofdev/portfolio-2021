@@ -32,6 +32,15 @@
     "eject": "react-scripts eject",
     "lint": "npx eslint src/**/*.tsx"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeyofdev/portfolio-2021.git"
+  },
+  "author": "jeyofdev <jgregoire.pro@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeyofdev/portfolio-2021/issues"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
