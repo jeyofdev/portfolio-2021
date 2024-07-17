@@ -9,7 +9,12 @@ import Text from './Text';
 const About = ({ aboutIsOpen, handleClose }: IAboutProps) => {
   return (
     <div className={`content-about ${aboutIsOpen}`}>
-      <button type="button" className="modal-close" aria-label="modal-close" onClick={handleClose}>
+      <button
+        type="button"
+        className="modal-close"
+        aria-label="modal-close"
+        onClick={handleClose}
+      >
         <FaTimes />
       </button>
 
@@ -34,7 +39,7 @@ const About = ({ aboutIsOpen, handleClose }: IAboutProps) => {
                 {data.content}
               </Text>
 
-              {data?.subContent ? <Text>{data.content}</Text> : ''}
+              {data?.subContent ? <Text>{data.subContent}</Text> : ''}
             </div>
           ))}
 

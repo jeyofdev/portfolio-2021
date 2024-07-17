@@ -27,9 +27,15 @@ const aboutDatas = [
   },
   {
     id: 5,
+    title: 'Montée en compétences',
+    content:
+      "j'ai considérablement renforcé mes compétences en Java, Spring et Angular par l'intermédiaire d'une formation POEC de 3 mois. Pendant cette pèriode, j'ai travaillé intensivement sur des projets utilisant Java et Angular, ce qui m'a permis de développer des compétences approfondies dans ces technologies. Cette expertise me permet aujourd'hui de gérer efficacement des projets de bout en bout, du développement backend à la création d'interfaces frontend intuitives.",
+  },
+  {
+    id: 6,
     title: "... Et aujourd'hui",
     content:
-      "Aujourd'hui, je suis à la recherche d'une entreprise dynamique pouvant m'accueillir afin de mettre en pratique toutes mes compétences acquises depuis de nombreux mois et commencer un nouveau chapitre et un nouveau challenge. A bientôt sur de futurs projets.",
+      "Aujourd'hui, je souhaite poursuivre ma carrière en tant que développeur web Fullstack et apporter mon expertise au sein d’une équipe composé de passionnés et de créatifs. Passionné par les nouvelles technologies et toujours en quête d'apprentissage, je suis particulièrement intéressé par l'approche agile et collaborative et intégrer une équipe serait pour moi une opportunité exceptionnelle de développer davantage mes compétences tout en contribuant activement à des projets ambitieux.",
   },
 ];
 
