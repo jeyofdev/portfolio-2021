@@ -1,5 +1,4 @@
-import React from 'react';
-import { IContactLinkProps } from '../../interfaces/ui.interface';
+import { IContactLinkProps } from '@interfaces/ui.interface';
 
 const Link = ({ href, icon, className = '' }: IContactLinkProps) => {
   return (

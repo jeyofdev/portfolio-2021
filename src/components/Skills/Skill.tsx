@@ -1,13 +1,10 @@
-import React from 'react';
 import Reveal from 'react-awesome-reveal';
 import { Tooltip } from 'react-tooltip';
 
-/* eslint-disable */
-import { keyframes } from '@emotion/react';
-/* eslint-disable */
-import useWindowSize from '../../hook/useWindowSize';
-import getNumberWithZero from '../../utils/numbers';
-import { ISkillProps } from '../../interfaces/reusable.interface';
+import useWindowSize from '@hooks/useWindowSize';
+import getNumberWithZero from '@utils/numbers';
+import { ISkillProps } from '@interfaces/reusable.interface';
+import { Fragment } from 'react/jsx-runtime';
 
 const Skill = ({
   data,
@@ -47,14 +44,14 @@ const Skill = ({
             <h2>{data.title}</h2>
             <div>
               {data.icons.map((icon, index) => (
-                <>
+                <Fragment key={index}>
                   <img id={`${data?.prefix}-${index}`} src={icon?.src} />
                   <Tooltip
                     anchorSelect={`#${data?.prefix}-${index}`}
                     content={icon?.name}
                     style={{ borderRadius: 8, textTransform: "uppercase" }}
                   />
-                </>
+                </Fragment>
               ))}
             </div>
           </div>

@@ -1,10 +1,10 @@
 import { FaTimes } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import cv from '../../assets/jeremy-gregoire-developpeur-full-stack.pdf';
-import aboutDatas from '../../datas/about';
-import Profile from '../../img/profile-photo.jpg';
-import { IAboutProps } from '../../interfaces/reusable.interface';
-import Text from './Text';
+import cv from '@assets/jeremy-gregoire-developpeur-full-stack.pdf';
+import aboutDatas from '@datas/about';
+import Profile from '@assets/img/profile-photo.jpg';
+import { IAboutProps } from '@interfaces/reusable.interface';
+import Text from '@components/Home/Text';
 
 const About = ({ aboutIsOpen, handleClose }: IAboutProps) => {
   return (

@@ -1,3 +1,6 @@
+@use "@styles/app/variables" as *;
+@use "@styles/core/functions/breakpoint" as *;
+
 /// media of at least the minimum breakpoint width
 ///
 /// @param $name {string} name of the breakpoint used
@@ -5,8 +8,8 @@
 @mixin media-queries-up($name, $breakpoints: $containerbreakpoints) {
   $min: breakpoint-min($name, $breakpoints);
 
-  @if $min {
-    @media (min-width: $min) {
+  @if $min != null {
+    @media (min-width: #{$min}) {
       @content;
     }
   } @else {
@@ -21,8 +24,8 @@
 @mixin media-queries-down($name, $breakpoints: $containerbreakpoints) {
   $max: breakpoint-max($name, $breakpoints);
 
-  @if $max {
-    @media (max-width: $max) {
+  @if $max != null {
+    @media (max-width: #{$max}) {
       @content;
     }
   } @else {
@@ -42,8 +45,8 @@
   $breakpointsMin: $containerbreakpoints,
   $breakpointsMax: $containerbreakpoints
 ) {
-  $min: breakpoint-min($nameMin, $breakpointsMin);
-  $max: breakpoint-max($nameMax, $breakpointsMax);
+  $min: f.breakpoint-min($nameMin, $breakpointsMin);
+  $max: f.breakpoint-max($nameMax, $breakpointsMax);
 
   @if $min != null and $max != null {
     @media (min-width: $min) and (max-width: $max) {

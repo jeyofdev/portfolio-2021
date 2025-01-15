@@ -1,5 +1,4 @@
-import React from 'react';
-import { IContactIconProps } from '../../interfaces/reusable.interface';
+import { IContactIconProps } from '@interfaces/reusable.interface';
 
 const Icon = ({ className, icon, children }: IContactIconProps) => {
   return (

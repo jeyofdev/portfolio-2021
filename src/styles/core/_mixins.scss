@@ -3,10 +3,10 @@
 
 // layout
 //
-@import 'mixins/breakpoints';
-@import 'mixins/container';
+@forward '@styles/core/mixins/breakpoints';
+@forward '@styles/core/mixins/container';
 
 // helpers
 //
-@import 'mixins/flex';
-@import 'mixins/grid';
+@forward '@styles/core/mixins/flex';
+@forward '@styles/core/mixins/grid';

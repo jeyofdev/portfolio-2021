@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { IWindowSize } from '../interfaces/hooks.interface';
+import { IWindowSize } from '@interfaces/hooks.interface';
 
 export default function useWindowSize() {
   const [windowSize, setWindowSize] = useState<IWindowSize>({

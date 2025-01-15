@@ -1,9 +1,11 @@
+@use "sass:map";
+
 /// minimum breakpoint width
 ///
 /// @param $name {string} name of the breakpoint used
 /// @param $breakpoints {map} list of the breakpoints
-@function breakpoint-min($name, $breakpoints: $gridBreakpoints) {
-  $min: map-get($breakpoints, $name);
+@function breakpoint-min($name, $breakpoints: $containerbreakpoints) {
+  $min: map.get($breakpoints, $name);
 
   @return if($min != 0, $min, null);
 }
@@ -12,8 +14,8 @@
 ///
 /// @param $name {string} name of the breakpoint used
 /// @param $breakpoints {map} list of the breakpoints
-@function breakpoint-max($name, $breakpoints: $gridBreakpoints) {
-  $next: map-get($breakpoints, $name);
+@function breakpoint-max($name, $breakpoints: $containerbreakpoints) {
+  $next: map.get($breakpoints, $name);
 
   @return if($next != 0, $next - 0.02, null);
 }

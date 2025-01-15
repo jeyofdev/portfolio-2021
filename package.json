@@ -1,87 +1,77 @@
 {
-  "name": "portfolio",
-  "version": "2.1.0",
-  "private": true,
-  "dependencies": {
-    "@emotion/react": "^11.7.1",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^12.0.0",
-    "@testing-library/user-event": "^13.2.1",
-    "@types/jest": "^27.0.1",
-    "@types/node": "^16.7.13",
-    "@types/react": "^17.0.20",
-    "@types/react-dom": "^17.0.9",
-    "owl.carousel": "^2.3.4",
-    "prop-types": "^15.8.0",
-    "react": "^17.0.2",
-    "react-awesome-reveal": "^3.8.1",
-    "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1",
-    "react-modal": "^3.14.4",
-    "react-owl-carousel": "^2.3.3",
-    "react-router-dom": "^6.2.1",
-    "react-scripts": "5.0.0",
-    "react-tooltip": "^5.10.0",
-    "typescript": "^4.4.2",
-    "web-vitals": "^2.1.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "npx eslint src/**/*.tsx"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jeyofdev/portfolio-2021.git"
-  },
-  "author": "jeyofdev <jgregoire.pro@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jeyofdev/portfolio-2021/issues"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@types/react-modal": "^3.13.1",
-    "@typescript-eslint/eslint-plugin": "^5.8.1",
-    "@typescript-eslint/parser": "^5.8.1",
-    "autoprefixer": "^10.4.1",
-    "eslint": "^8.5.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-airbnb-typescript": "^16.1.0",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-react-hooks": "^4.3.0",
-    "lint-staged": "^12.1.4",
-    "postcss": "^8.4.5",
-    "prettier": "^2.5.1",
-    "sass": "^1.77.8",
-    "tailwindcss": "^3.0.8"
-  },
-  "lint-staged": {
-    "src/**/*.{js,ts,jsx,tsx}": [
-      "eslint --config ./.eslintrc --ext js --ext ts --ext jsx --ext tsx --fix"
-    ]
-  }
+	"name": "portfolio",
+	"version": "3.1.0",
+	"private": true,
+	"type": "module",
+	"dependencies": {
+		"@emotion/react": "^11.7.1",
+		"owl.carousel": "^2.3.4",
+		"react": "^18.3.1",
+		"react-awesome-reveal": "^4.3.1",
+		"react-dom": "^18.3.1",
+		"react-icons": "^5.4.0",
+		"react-owl-carousel": "^2.3.3",
+		"react-router-dom": "^6.2.1",
+		"react-tooltip": "^5.28.0"
+	},
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc -b && vite build",
+		"lint": "eslint --fix ./src",
+		"preview": "vite preview"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.17.0",
+		"@types/node": "^22.10.6",
+		"@types/react": "^18.3.18",
+		"@types/react-dom": "^18.3.5",
+		"@typescript-eslint/eslint-plugin": "^8.20.0",
+		"@typescript-eslint/parser": "^8.20.0",
+		"@vitejs/plugin-react": "^4.3.4",
+		"eslint": "^9.17.0",
+		"eslint-config-airbnb": "^19.0.4",
+		"eslint-config-prettier": "^10.0.1",
+		"eslint-import-resolver-alias": "^1.1.2",
+		"eslint-import-resolver-typescript": "^3.7.0",
+		"eslint-plugin-import": "^2.31.0",
+		"eslint-plugin-jsx-a11y": "^6.10.2",
+		"eslint-plugin-prettier": "^5.2.2",
+		"eslint-plugin-react": "^7.37.4",
+		"eslint-plugin-react-hooks": "^5.1.0",
+		"eslint-plugin-react-refresh": "^0.4.18",
+		"globals": "^15.14.0",
+		"lint-staged": "^12.1.4",
+		"prettier": "^3.4.2",
+		"sass": "^1.77.8",
+		"typescript": "~5.6.2",
+		"typescript-eslint": "^8.18.2",
+		"vite": "^6.0.5"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jeyofdev/portfolio-2021.git"
+	},
+	"author": "jeyofdev <jgregoire.pro@gmail.com>",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/jeyofdev/portfolio-2021/issues"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
 }

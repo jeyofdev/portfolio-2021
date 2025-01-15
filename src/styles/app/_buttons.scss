@@ -1,3 +1,5 @@
+@use "@styles/app/variables" as *;
+
 %btn {
   background: transparent;
   color: $dark;
@@ -6,6 +8,7 @@
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
+	text-decoration: none;
   padding: 0;
   overflow: hidden;
 }

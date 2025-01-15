@@ -1,6 +1,5 @@
-import React from 'react';
-import '../../styles/components/reusable/Text.scss';
-import { ITextProps } from '../../interfaces/reusable.interface';
+import '@styles/components/reusable/text.scss';
+import { ITextProps } from '@interfaces/reusable.interface';
 
 const Text = ({ title, children, classname }: ITextProps) => {
   return (
