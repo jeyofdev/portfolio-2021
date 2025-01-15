@@ -1,3 +1,6 @@
+@use "@styles/app/variables" as *;
+@use "@styles/core/mixins/breakpoints" as breakpoints;
+
 /// set the css properties of the container
 ///
 /// @param $className {string} name of the generated class (container or container-fluid)
@@ -8,8 +11,8 @@
 ) {
   .#{$className} {
     width: calc(100% - #{$paddingContainer});
-    padding-right: $paddingContainer / 2;
-    padding-left: $paddingContainer / 2;
+    padding-right: calc($paddingContainer / 2);
+    padding-left: calc($paddingContainer / 2);
     margin: 0 auto;
 
     @if $className == 'container' {
@@ -27,7 +30,7 @@
   $breakpoints: $containerbreakpoints
 ) {
   @each $key, $value in $max-widths {
-    @include media-queries-up($key, $breakpoints) {
+    @include breakpoints.media-queries-up($key, $breakpoints) {
       max-width: $value;
     }
   }

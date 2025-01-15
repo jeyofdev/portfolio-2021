@@ -1,5 +1,8 @@
+@use "@styles/core/mixins/container" as container;
+
+
 // layout
 //
 // generate the css for the container
 //
-@include make-container('container');
+@include container.make-container('container');

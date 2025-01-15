@@ -1,4 +1,4 @@
-@import '../styles.scss';
+@use 'sass:color';
 
 /* ====================
     TRIGGER BUTTON
@@ -33,7 +33,7 @@
 .btn-trigger {
   > .icon {
     display: block;
-    background-color: lighten($color-nav, 30%);
+    background-color: color.adjust($color-nav, $lightness: 30%);
     width: 25px;
     height: 2px;
     margin: 5px auto;
@@ -142,7 +142,7 @@
   position: absolute;
   top: 0;
   height: 100%;
-  background: lighten($color-nav, 70%);
+  background: color.adjust($color-nav, $lightness: 70%);
   pointer-events: none;
   opacity: 1;
   z-index: 100;
@@ -202,6 +202,7 @@
   color: $color-link;
   font-weight: bold;
   background: transparent;
+	text-decoration: none;
   border: none;
   text-align: center;
   cursor: pointer;
@@ -222,7 +223,7 @@
     line-height: 1;
     font-size: 1.5em;
     padding: 0 0.25em;
-    color: lighten($color-nav, 15%);
+    color: color.adjust($color-nav, $lightness: 15%);
     margin-bottom: 10px;
 
     @include media-queries-up('md') {
@@ -242,7 +243,7 @@
     margin-top: 0.25em;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: lighten($color-nav, 15%);
+    color: color.adjust($color-nav, $lightness: 15%);
     transition: all 0.3s;
 
     &:after {

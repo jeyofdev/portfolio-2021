@@ -1,4 +1,4 @@
-import '@styles/components/reusable/Text.scss';
+import '@styles/components/reusable/text.scss';
 import { ITextProps } from '@interfaces/reusable.interface';
 
 const Text = ({ title, children, classname }: ITextProps) => {

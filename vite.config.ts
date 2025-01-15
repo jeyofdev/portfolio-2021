@@ -15,4 +15,17 @@ export default defineConfig({
       "@assets": path.resolve(__dirname, "./src/assets"),
 		},
 	},
+	css: {
+		preprocessorOptions: {
+			scss: {
+				additionalData: `
+					@use "@styles/core/mixins" as *;
+					@use "@styles/core/layout" as *;
+					@use "@styles/app/variables" as *;
+					@use "@styles/app/index" as *;
+          @use "@styles/app/animations" as *;
+				`,
+			},
+		},
+	},
 });
