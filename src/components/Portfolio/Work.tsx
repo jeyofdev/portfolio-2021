@@ -1,7 +1,6 @@
-import React from 'react';
-import getNumberWithZero from '../../utils/numbers';
-import Button from '../reusable/Button';
-import { IWorkProps } from '../../interfaces/reusable.interface';
+import getNumberWithZero from '@utils/numbers';
+import Button from '@components/reusable/Button';
+import { IWorkProps } from '@interfaces/reusable.interface';
 
 const Work = ({ data, currentNumber, totalNumber }: IWorkProps) => {
   /**

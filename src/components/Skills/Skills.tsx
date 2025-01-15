@@ -1,9 +1,8 @@
-import React from 'react';
-import skills from '../../datas/skills';
-import Skill from './Skill';
+import skills from '@datas/skills';
+import Skill from '@components/Skills/Skill';
 import { FadeIn, FadeInWidth, FadeInWidth100 } from './Skills.animate';
-import { ISkill } from '../../interfaces/items.interface';
-import '../../styles/components/skills.scss';
+import { ISkill } from '@interfaces/items.interface';
+import '@styles/components/skills.scss';
 
 const Skills = () => {
   return (

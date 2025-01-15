@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { INavLinkProps } from '../../interfaces/ui.interface';
+import { INavLinkProps } from '@interfaces/ui.interface';
 
 const NavLink = ({ to, id, onClick, title, subtitle }: INavLinkProps) => {
   return (

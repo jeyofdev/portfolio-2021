@@ -1,12 +1,11 @@
-import React from 'react';
 import OwlCarousel from 'react-owl-carousel';
-import works from '../../datas/works';
-import Work from './Work';
-import Loader from '../reusable/Loader';
+import works from '@datas/works';
+import Work from '@components/Portfolio/Work';
+import Loader from '@components/reusable/Loader';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-import '../../styles/components/portfolio.scss';
-import { IWork } from '../../interfaces/items.interface';
+import '@styles/components/portfolio.scss';
+import { IWork } from '@interfaces/items.interface';
 
 const Portfolio = () => {
   return (

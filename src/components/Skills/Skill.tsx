@@ -1,13 +1,12 @@
-import React from 'react';
 import Reveal from 'react-awesome-reveal';
 import { Tooltip } from 'react-tooltip';
 
 /* eslint-disable */
 import { keyframes } from '@emotion/react';
 /* eslint-disable */
-import useWindowSize from '../../hook/useWindowSize';
-import getNumberWithZero from '../../utils/numbers';
-import { ISkillProps } from '../../interfaces/reusable.interface';
+import useWindowSize from '@hooks/useWindowSize';
+import getNumberWithZero from '@utils/numbers';
+import { ISkillProps } from '@interfaces/reusable.interface';
 
 const Skill = ({
   data,

@@ -1,5 +1,4 @@
-import React from 'react';
-import '../../styles/components/reusable/loader.scss';
+import '@styles/components/reusable/loader.scss';
 
 const Loader = () => {
   return (

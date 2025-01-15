@@ -23,6 +23,17 @@
 		"noUncheckedSideEffectImports": true,
 		"resolveJsonModule": true,
 		"jsx": "react-jsx",
+
+		// paths
+		"paths": {
+      "@styles/*": ["src/styles/*"],
+			"@components/*": ["src/components/*"],
+			"@interfaces/*": ["src/interfaces/*"],
+      "@datas/*": ["src/datas/*"],
+			"@hooks/*": ["src/hooks/*"],
+      "@utils/*": ["src/utils/*"],
+      "@assets/*": ["src/assets/*"]
+		}
 	},
 	"include": ["vite.config.ts", "src"],
 	"exclude": ["node_modules", "dist"]

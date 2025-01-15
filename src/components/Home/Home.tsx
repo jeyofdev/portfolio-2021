@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FaStar } from 'react-icons/fa';
-import '../../styles/components/home.scss';
-import LinkItem from '../reusable/Link';
-import social from '../../datas/social';
-import { ISocial } from '../../interfaces/items.interface';
-import About from './About';
-import SocialIcon from '../reusable/SocialIcon';
+import '@styles/components/home.scss';
+import LinkItem from '@components/reusable/Link';
+import social from '@datas/social';
+import { ISocial } from '@interfaces/items.interface';
+import SocialIcon from '@components/reusable/SocialIcon';
+import About from '@components/Home/About';
 
 const Home = () => {
   const [aboutIsOpen, setAboutIsOpen] = useState<string>('');

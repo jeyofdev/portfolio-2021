@@ -1,15 +1,14 @@
-import React from 'react';
 import {
   FaShareAltSquare,
   FaEnvelopeOpen,
   FaPhoneSquareAlt,
 } from 'react-icons/fa';
-import social from '../../datas/social';
-import { ISocial } from '../../interfaces/items.interface';
-import '../../styles/components/contact.scss';
-import Link from '../reusable/Link';
-import SocialIcon from '../reusable/SocialIcon';
-import Icon from './icon';
+import social from '@datas/social';
+import { ISocial } from '@interfaces/items.interface';
+import '@styles/components/contact.scss';
+import Link from '@components/reusable/Link';
+import SocialIcon from '@components/reusable/SocialIcon';
+import Icon from '@components/Contact/icon';
 
 const Contact = () => {
   return (

@@ -1,5 +1,5 @@
 import { Keyframes } from '@emotion/react';
-import { ISkill, IWork } from './items.interface';
+import { ISkill, IWork } from '@interfaces/items.interface';
 
 export interface IButtonProps {
   label: string;

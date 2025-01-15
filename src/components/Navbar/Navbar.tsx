@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import navItems from '../../datas/nav';
-import { INavItem } from '../../interfaces/items.interface';
-import '../../styles/components/navbar.scss';
-import NavLink from './NavLink';
+import navItems from '@datas/nav';
+import { INavItem } from '@interfaces/items.interface';
+import '@styles/components/navbar.scss';
+import NavLink from '@components/Navbar/NavLink';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);

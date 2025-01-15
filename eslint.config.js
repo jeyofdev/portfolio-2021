@@ -12,25 +12,33 @@ import reactRefresh from "eslint-plugin-react-refresh";
 
 export default [
 	{
-		ignores: ["dist", "eslint.config.js", "vite.config.ts"],
+		ignores: ["dist", "eslint.config.js", "vite.config.ts"], // Ignorer certains fichiers
 		files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
 		languageOptions: {
 			ecmaVersion: "latest",
 			sourceType: "module",
-			parser: typescriptEslintParser,
+			parser: typescriptEslintParser, // Utilisation correcte du parser
 			parserOptions: {
-				ecmaFeatures: { jsx: true },
+				ecmaFeatures: { jsx: true }, // Activer JSX
 			},
 		},
 		settings: {
-			react: { version: "detect" },
+			react: { version: "detect" }, // Détection automatique de la version React
 			"import/resolver": {
 				typescript: {
 					alwaysTryTypes: true,
 					project: "./tsconfig.json",
 				},
 				alias: {
-					map: [],
+					map: [
+						["@styles", "./src/styles"],
+						["@components", "./src/components"],
+            ["@interfaces", "./src/interfaces"],
+            ["@datas", "./src/datas"],
+            ["@hooks", "./src/hooks"],
+            ["@utils", "./src/utils"],
+            ["@assets", "./src/assets"],
+					],
 					extensions: [".js", ".jsx", ".ts", ".tsx"],
 				},
 			},
@@ -54,9 +62,9 @@ export default [
 			...tsPlugin.configs.recommended.rules,
 			...prettierConfig.rules,
 			"prettier/prettier": ["error", { endOfLine: "auto" }],
-			"react/react-in-jsx-scope": "off",
+			"react/react-in-jsx-scope": "off", // React 17+ et Vite n'ont pas besoin d'import explicite
 			"react/jsx-filename-extension": [1, { extensions: [".jsx", ".tsx"] }],
-			"import/no-unresolved": "error",
+			"import/no-unresolved": "error", // Garantit que les imports sont corrects
 			"import/extensions": [
 				"error",
 				"ignorePackages",
@@ -67,12 +75,12 @@ export default [
 					tsx: "never",
 				},
 			],
-			"@typescript-eslint/no-unused-vars": ["warn"],
-			"no-console": ["warn", { allow: ["warn", "error"] }],
-			"react/prop-types": "off",
-			"react/jsx-props-no-spreading": "off",
-			"react-hooks/rules-of-hooks": "error",
-			"react-hooks/exhaustive-deps": "warn",
+			"@typescript-eslint/no-unused-vars": ["warn"], // Pour éviter les variables inutilisées
+			"no-console": ["warn", { allow: ["warn", "error"] }], // Autorise console.warn et console.error
+			"react/prop-types": "off", // Désactiver car on utilise TypeScript pour les props
+			"react/jsx-props-no-spreading": "off", // Désactiver l'interdiction du spread pour les props
+			"react-hooks/rules-of-hooks": "error", // Valide l'utilisation correcte des hooks
+			"react-hooks/exhaustive-deps": "warn", // Avertit sur les dépendances manquantes
 			"react-refresh/only-export-components": [
 				"warn",
 				{ allowConstantExport: true },
