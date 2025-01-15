@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 export interface INavLinkProps {
   to: string;
   id: number;

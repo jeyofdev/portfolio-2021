@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import { Keyframes } from '@emotion/react';
 import { ISkill, IWork } from './items.interface';
 

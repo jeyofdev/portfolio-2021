@@ -1,4 +1,3 @@
-/* eslint-disable operator-linebreak */
 import { useState } from 'react';
 import navItems from '../../datas/nav';
 import { INavItem } from '../../interfaces/items.interface';
@@ -21,11 +20,11 @@ const Navbar = () => {
     setClassnameMenu(isOpen ? 'menu menu-close' : 'menu menu-open');
 
     setClassnameRevealer(
-      isOpen ? 'block-revealer animate-close' : 'block-revealer animate-open',
+      isOpen ? 'block-revealer animate-close' : 'block-revealer animate-open'
     );
 
     setClassnameMenuInner(
-      isOpen ? 'menu-inner animate-close' : 'menu-inner animate-open',
+      isOpen ? 'menu-inner animate-close' : 'menu-inner animate-open'
     );
 
     setTimeout(() => {

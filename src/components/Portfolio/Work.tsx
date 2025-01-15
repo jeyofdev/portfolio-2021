@@ -9,7 +9,7 @@ const Work = ({ data, currentNumber, totalNumber }: IWorkProps) => {
    */
   const getNumbers = () => {
     return `${getNumberWithZero(currentNumber)}/${getNumberWithZero(
-      totalNumber,
+      totalNumber
     )}`;
   };
 
@@ -30,7 +30,6 @@ const Work = ({ data, currentNumber, totalNumber }: IWorkProps) => {
             <p className="description">{data.content}</p>
             <p className="logos">
               {data.techno.map((techno: string, index) => (
-                // eslint-disable-next-line react/no-array-index-key
                 <img key={index} src={techno} alt="icon" />
               ))}
             </p>
@@ -43,7 +42,9 @@ const Work = ({ data, currentNumber, totalNumber }: IWorkProps) => {
                 isDisable={data.isOnline}
               />
             ) : (
-              <span className="is-disabled btn-more py-3">Bientôt en ligne</span>
+              <span className="is-disabled btn-more py-3">
+                Bientôt en ligne
+              </span>
             )}
 
             {data.code && (

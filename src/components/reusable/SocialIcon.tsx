@@ -8,7 +8,6 @@ import {
 import { ISocialIconProps } from '../../interfaces/reusable.interface';
 
 const SocialIcon = ({ title, className }: ISocialIconProps) => {
-  // eslint-disable-next-line no-undef
   const getSocialIcon = (icon: string): JSX.Element | null => {
     let output;
 
