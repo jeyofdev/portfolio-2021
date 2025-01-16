@@ -38,7 +38,7 @@ const Work = ({ data, currentNumber, totalNumber }: IWorkProps) => {
                 <Button
                   label="voir le site"
                   className="btn-more"
-                  url={data.link}
+                  url={data.link ? data.link : undefined}
                   isDisable={data.isOnline}
                 />
               ) : null}

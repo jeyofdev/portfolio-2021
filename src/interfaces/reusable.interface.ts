@@ -4,7 +4,7 @@ import { ISkill, IWork } from '@interfaces/items.interface';
 export interface IButtonProps {
   label: string;
   className: string;
-  url: string;
+  url?: string;
   isDisable: boolean;
 }
 

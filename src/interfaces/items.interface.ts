@@ -18,7 +18,7 @@ export interface IWork {
   content: string;
   techno: string[];
   isOnline: boolean;
-  link: string;
+  link?: string;
   mockup: string;
   code?: string;
 }
