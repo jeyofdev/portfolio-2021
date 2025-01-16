@@ -83,6 +83,7 @@ export default [
 				{ allowConstantExport: true },
 			],
 			"prefer-const": "warn",
+			'import/named': 'warn',
 		},
 	},
 ];
