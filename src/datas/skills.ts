@@ -102,13 +102,6 @@ const skills = [
   },
   {
     id: 3,
-    image: wordpress,
-    title: 'Développeur Wordpress',
-    prefix: 'wordpress',
-    icons: [{ src: wordpressLogo, name: 'wordpress' }],
-  },
-  {
-    id: 4,
     image: workflow,
     title: 'Workflow',
     prefix: 'workflow',
@@ -122,7 +115,7 @@ const skills = [
     ],
   },
   {
-    id: 5,
+    id: 4,
     image: design,
     title: 'Design',
     prefix: 'design',
@@ -132,13 +125,6 @@ const skills = [
       { src: illustrator, name: 'illustrator' },
     ],
   },
-  // {
-  //   id: 6,
-  //   image: next,
-  //   prefix: 'next',
-  //   title: 'Veille actuelle',
-  //   icons: [{ src: vuejs, name: 'vue js' }],
-  // },
 ];
 
 export default skills;

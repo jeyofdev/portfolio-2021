@@ -10,6 +10,8 @@ import codewars from '@assets/img/portfolio/codewars.png';
 import angularAuth from '@assets/img/portfolio/angular-auth-firebase.jpg';
 import movieAppReactGraphql from '@assets/img/portfolio/movie-app-react-graphql.png';
 import estateMinimalistReact from '@assets/img/portfolio/estate-minimalist-react.jpg';
+import springDTOMapper from '@assets/img/portfolio/spring-DTO-mapper.jpg';
+import sortieFacileBackend from '@assets/img/portfolio/sortie-facile-backend.jpg';
 
 import mockupMysterium from '@assets/img/portfolio/mockup/mysterium.png';
 import mockupBabyplace from '@assets/img/portfolio/mockup/babyplace.png';
@@ -23,6 +25,8 @@ import mockupCodewars from '@assets/img/portfolio/mockup/codewars.png';
 import mockupAngularAuth from '@assets/img/portfolio/mockup/angular-auth-firebase.png';
 import mockupMovieAppReactGraphql from '@assets/img/portfolio/mockup/movie-app-react-graphql.png';
 import mockupEstateMinimalistReact from '@assets/img/portfolio/mockup/estate-minimalist-react.png';
+import mockupSpringDTOMapper from '@assets/img/portfolio/mockup/spring-DTO-mapper.png';
+import mockupSortieFacileBackend from '@assets/img/portfolio/mockup/sortie-facile-backend.png';
 
 import html from '@assets/img/skills/icons/html.svg';
 import css from '@assets/img/skills/icons/css.svg';
@@ -41,6 +45,10 @@ import angular from '@assets/img/skills/icons/angular.svg';
 import graphQl from '@assets/img/skills/icons/graphQl.svg';
 import materialUI from '@assets/img/skills/icons/material-ui.svg';
 import apollo from '@assets/img/skills/icons/apollo.svg';
+import java from '@assets/img/skills/icons/java.svg';
+import spring from '@assets/img/skills/icons/spring.svg';
+import postgresql from '@assets/img/skills/icons/postgresql.svg';
+import docker from '@assets/img/skills/icons/docker.svg';
 
 const works = [
   {
@@ -57,6 +65,28 @@ const works = [
   },
   {
     id: 2,
+    image: sortieFacileBackend,
+    title: 'sortie-facile-backend ',
+    content:
+      "Fork du projet de formation sortie facile. Ce projet est un fork du projet de base que j'ai démarré de zéro avec ma propre vision en termes de développement.",
+    techno: [java, spring, mysql, jwt],
+    isOnline: false,
+    code: 'https://github.com/jeyofdev/sortie-facile-backend',
+    mockup: mockupSortieFacileBackend,
+  },
+  {
+    id: 3,
+    image: springDTOMapper,
+    title: 'Spring DTO Mapper',
+    content:
+      "Micro-application Spring Boot avec DTO, mappage et relations entre entités.",
+    techno: [java, spring, postgresql, docker],
+    isOnline: false,
+    code: 'https://github.com/jeyofdev/spring-dto-mapper',
+    mockup: mockupSpringDTOMapper,
+  },
+  {
+    id: 4,
     image: angularAuth,
     title: 'Angular auth with firebase',
     content:
@@ -68,7 +98,7 @@ const works = [
     mockup: mockupAngularAuth,
   },
   {
-    id: 3,
+    id: 5,
     image: movieAppReactGraphql,
     title: 'Movie app react graphql',
     content:
@@ -89,7 +119,7 @@ const works = [
     mockup: mockupMovieAppReactGraphql,
   },
   {
-    id: 4,
+    id: 6,
     image: mysterium,
     title: 'Mysterium',
     content:
@@ -100,7 +130,7 @@ const works = [
     mockup: mockupMysterium,
   },
   {
-    id: 5,
+    id: 7,
     image: babyplace,
     title: 'Babyplace',
     content:
@@ -111,7 +141,7 @@ const works = [
     mockup: mockupBabyplace,
   },
   {
-    id: 6,
+    id: 8,
     image: hackathon2021,
     title: "Cook'eat",
     content:
@@ -122,7 +152,7 @@ const works = [
     mockup: mockupHackathon2021,
   },
   {
-    id: 7,
+    id: 9,
     image: devchallengeUnsplash,
     title: 'My unsplash',
     content:
@@ -135,7 +165,7 @@ const works = [
     code: 'https://github.com/jeyofdev/devchallenges--my-unsplash',
   },
   {
-    id: 8,
+    id: 10,
     image: devchallengeWeatherApp,
     title: 'Weather app ',
     content:
@@ -147,7 +177,7 @@ const works = [
     code: 'https://github.com/jeyofdev/devchallenges--weather-app',
   },
   {
-    id: 9,
+    id: 11,
     image: devchallengeTodoList,
     title: 'Todo app',
     content:
@@ -159,7 +189,7 @@ const works = [
     code: 'https://github.com/jeyofdev/devchallenges--todo-app',
   },
   {
-    id: 10,
+    id: 12,
     image: devchallengeWinbnb,
     title: 'Windbnb',
     content:
@@ -171,7 +201,7 @@ const works = [
     code: 'https://github.com/jeyofdev/devchallenges--windbnb',
   },
   {
-    id: 11,
+    id: 13,
     image: devchallengeEdieHomepage,
     title: 'Edie homepage',
     content: 'Petit challenge via le site devChallenge.',
@@ -182,7 +212,7 @@ const works = [
     code: 'https://github.com/jeyofdev/devchallenges--edie-homepage',
   },
   {
-    id: 12,
+    id: 14,
     image: codewars,
     title: 'Codewars',
     content: "Quelques petits exercices d'algo réalisé via codewars.",

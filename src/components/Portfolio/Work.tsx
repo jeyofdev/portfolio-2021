@@ -33,27 +33,25 @@ const Work = ({ data, currentNumber, totalNumber }: IWorkProps) => {
               ))}
             </p>
 
-            {data.isOnline ? (
-              <Button
-                label={data.isOnline ? 'voir le site' : 'Bientôt en ligne'}
-                className="btn-more"
-                url={data.link}
-                isDisable={data.isOnline}
-              />
-            ) : (
-              <span className="is-disabled btn-more py-3">
-                Bientôt en ligne
-              </span>
-            )}
+            <div className="btn-box">
+              {data.isOnline ? (
+                <Button
+                  label="voir le site"
+                  className="btn-more"
+                  url={data.link}
+                  isDisable={data.isOnline}
+                />
+              ) : null}
 
-            {data.code && (
-              <Button
-                label="Le code"
-                className="btn-more"
-                url={data.code}
-                isDisable={false}
-              />
-            )}
+              {data.code && (
+                <Button
+                  label="Le code"
+                  className="btn-more"
+                  url={data.code}
+                  isDisable={false}
+                />
+              )}
+            </div>
           </div>
         </div>
       </div>
