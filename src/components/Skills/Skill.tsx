@@ -45,11 +45,11 @@ const Skill = ({
             <div>
               {data.icons.map((icon, index) => (
                 <Fragment key={index}>
-                  <img id={`${data?.prefix}-${index}`} src={icon?.src} />
+                  <img id={`${data?.prefix}-${index}`} src={icon?.src} alt="" />
                   <Tooltip
                     anchorSelect={`#${data?.prefix}-${index}`}
                     content={icon?.name}
-                    style={{ borderRadius: 8, textTransform: "uppercase" }}
+                    style={{ borderRadius: 8, textTransform: 'uppercase' }}
                   />
                 </Fragment>
               ))}

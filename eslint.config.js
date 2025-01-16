@@ -1,7 +1,5 @@
 import tsPlugin from "@typescript-eslint/eslint-plugin";
-import typescriptEslintParser from "@typescript-eslint/parser"; // Assurez-vous d'importer le parser correctement
-import airbnbBase from "eslint-config-airbnb-base";
-import airbnbHooks from "eslint-config-airbnb/hooks";
+import typescriptEslintParser from "@typescript-eslint/parser";
 import prettierConfig from "eslint-config-prettier";
 import importPlugin from "eslint-plugin-import";
 import jsxA11y from "eslint-plugin-jsx-a11y";
@@ -12,18 +10,18 @@ import reactRefresh from "eslint-plugin-react-refresh";
 
 export default [
 	{
-		ignores: ["dist", "eslint.config.js", "vite.config.ts"], // Ignorer certains fichiers
+		ignores: ["dist", "eslint.config.js", "vite.config.ts"],
 		files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
 		languageOptions: {
 			ecmaVersion: "latest",
 			sourceType: "module",
-			parser: typescriptEslintParser, // Utilisation correcte du parser
+			parser: typescriptEslintParser,
 			parserOptions: {
-				ecmaFeatures: { jsx: true }, // Activer JSX
+				ecmaFeatures: { jsx: true },
 			},
 		},
 		settings: {
-			react: { version: "detect" }, // Détection automatique de la version React
+			react: { version: "detect" },
 			"import/resolver": {
 				typescript: {
 					alwaysTryTypes: true,
@@ -56,15 +54,13 @@ export default [
 			...react.configs.recommended.rules,
 			...reactHooks.configs.recommended.rules,
 			...jsxA11y.configs.recommended.rules,
-			...airbnbBase.rules,
-			...airbnbHooks.rules,
 			...importPlugin.configs.recommended.rules,
 			...tsPlugin.configs.recommended.rules,
 			...prettierConfig.rules,
 			"prettier/prettier": ["error", { endOfLine: "auto" }],
-			"react/react-in-jsx-scope": "off", // React 17+ et Vite n'ont pas besoin d'import explicite
+			"react/react-in-jsx-scope": "off",
 			"react/jsx-filename-extension": [1, { extensions: [".jsx", ".tsx"] }],
-			"import/no-unresolved": "error", // Garantit que les imports sont corrects
+			"import/no-unresolved": "error",
 			"import/extensions": [
 				"error",
 				"ignorePackages",
@@ -75,16 +71,18 @@ export default [
 					tsx: "never",
 				},
 			],
-			"@typescript-eslint/no-unused-vars": ["warn"], // Pour éviter les variables inutilisées
-			"no-console": ["warn", { allow: ["warn", "error"] }], // Autorise console.warn et console.error
-			"react/prop-types": "off", // Désactiver car on utilise TypeScript pour les props
-			"react/jsx-props-no-spreading": "off", // Désactiver l'interdiction du spread pour les props
-			"react-hooks/rules-of-hooks": "error", // Valide l'utilisation correcte des hooks
-			"react-hooks/exhaustive-deps": "warn", // Avertit sur les dépendances manquantes
+			"@typescript-eslint/no-unused-vars": ["warn"],
+			"no-console": ["warn", { allow: ["warn", "error"] }],
+			"no-debugger": ["warn"],
+			"react/prop-types": "off",
+			"react/jsx-props-no-spreading": "off",
+			"react-hooks/rules-of-hooks": "error",
+			"react-hooks/exhaustive-deps": "warn",
 			"react-refresh/only-export-components": [
 				"warn",
 				{ allowConstantExport: true },
 			],
+			"prefer-const": "warn",
 		},
 	},
 ];
