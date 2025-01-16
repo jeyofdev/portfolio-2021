@@ -79,7 +79,7 @@ const works = [
     image: springDTOMapper,
     title: 'Spring DTO Mapper',
     content:
-      "Micro-application Spring Boot avec DTO, mappage et relations entre entités.",
+      'Micro-application Spring Boot avec DTO, mappage et relations entre entités.',
     techno: [java, spring, postgresql, docker],
     isOnline: false,
     code: 'https://github.com/jeyofdev/spring-dto-mapper',

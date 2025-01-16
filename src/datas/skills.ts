@@ -1,7 +1,7 @@
 // bg
 import frontEnd from '@assets/img/skills/front-end.jpg';
 import backEnd from '@assets/img/skills/back-end.jpg';
-import wordpress from '@assets/img/skills/wordpress.jpg';
+// import wordpress from '@assets/img/skills/wordpress.jpg';
 import design from '@assets/img/skills/design.jpg';
 import workflow from '@assets/img/skills/workflow.jpg';
 // import next from '@assets/img/skills/next.jpg';
@@ -42,7 +42,7 @@ import nodejs from '@assets/img/skills/icons/node-js.svg';
 import java from '@assets/img/skills/icons/java.svg';
 import spring from '@assets/img/skills/icons/spring.svg';
 
-import wordpressLogo from '@assets/img/skills/icons/wordpress.svg';
+// import wordpressLogo from '@assets/img/skills/icons/wordpress.svg';
 
 import git from '@assets/img/skills/icons/git.svg';
 import github from '@assets/img/skills/icons/github.svg';
