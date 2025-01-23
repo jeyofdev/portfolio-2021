@@ -1,6 +1,6 @@
 import { FaTimes } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import cv from '@assets/jeremy-gregoire-developpeur-full-stack.pdf';
+import cv from '@assets/jeremy-gregoire-developpeur-fullstack-cv.pdf';
 import aboutDatas from '@datas/about';
 import Profile from '@assets/img/profile-photo.jpg';
 import { IAboutProps } from '@interfaces/reusable.interface';
